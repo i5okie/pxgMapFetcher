@@ -1,5 +1,5 @@
 # pxgMapFetcher
----
+
 A utility to download and compile ModBus register maps for specified uids
 from APC PowerXpert Gateway Series 1000 devices.
 
