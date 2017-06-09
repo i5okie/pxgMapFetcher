@@ -1,6 +1,5 @@
 class Site
-  extends Site
-  include Device
+  include Support
   
   def initialize(site)
     @@name = site[:name]
@@ -10,6 +9,7 @@ class Site
     @@savedir = site[:saveDir]
     @@devicesfile = site[:devicesFile]
     @@endpointurl = site[:endpointUrl]
+    updateDevices(self)
   end
   
   def name

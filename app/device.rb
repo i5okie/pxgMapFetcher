@@ -1,7 +1,6 @@
-require 'yaml'
 
 class Device
-  extend Device
+  extend Support
   
   def initialize(name, ip, url_endpoint)
     @@name = name

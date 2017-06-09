@@ -22,4 +22,16 @@ module Support
     res = h.request req
     yield res.body
   end
+  
+  def updateDevices(site)
+    dlist = SmarterCSV.process(site.devicesfile)
+    devices = site.devices
+    dlist.each do |d|
+      curdev = Device.new(d[:name],d[:ip],site.endpointurl)
+      curdev.username = site.credentials['username']
+      curdev.password = site.credentials['password']
+      devices.push curdev
+      PrintLine.done
+    end
+  end
 end
