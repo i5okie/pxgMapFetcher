@@ -24,14 +24,38 @@ module Support
   end
   
   def updateDevices(site)
-    dlist = SmarterCSV.process(site.devicesfile)
-    devices = site.devices
-    dlist.each do |d|
-      curdev = Device.new(d[:name],d[:ip],site.endpointurl)
-      curdev.username = site.credentials['username']
-      curdev.password = site.credentials['password']
-      devices.push curdev
-      PrintLine.done
+    begin
+      puts site.devicesFile.light_red
+      dlist = SmarterCSV.process(site.devicesfile)
+      # raise "updateDevices error".red
+      devices = site.devices
+      dlist.each do |d|
+        curdev = Device.new(d[:name],d[:ip],site.endpointurl)
+        curdev.username = site.credentials['username']
+        curdev.password = site.credentials['password']
+        devices.push curdev
+        PrintLine.done
+      end
+    rescue
+    
     end
+    
+
+  def strace(exception)
+    print "\r" << (' ' * 50) << "\n"
+        stacktrace = exception.backtrace.map do |call|
+        if parts = call.match(/^(?<file>.+):(?<line>\d+):in `(?<code>.*)'$/)
+          file = parts[:file].sub /^#{Regexp.escape(File.join(Dir.getwd, ''))}/, ''
+          line = "#{file.cyan} #{'('.white}#{parts[:line].green}#{'): '.white} #{parts[:code].red}"
+          # line = "#{ecolorize(file, 36)} #{ecolorize('(', 37)}#{ecolorize(parts[:line], 32)}#{ecolorize('): ', 37)} #{ecolorize(parts[:code], 31)}"
+        else
+          line = call.red
+        end
+         line
+       end
+      puts "Fatal error:\n"
+      stacktrace.each { |line| puts line }
+      puts
+      raise "Failed"
   end
 end
