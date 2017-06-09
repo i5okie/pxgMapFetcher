@@ -1,23 +1,52 @@
-#
 class Site
-  attr_accessor name,
-                uids,
-                username,
-                password,
-                savedir,
-                devicesfile,
-                endpointurl
-
+  include Sites
   include Support
-  #
+  
   def initialize(site)
-    @name = site[:name]
-    @uids = site[:uids]
-    @username = site[:username]
-    @password = site[:password]
-    @savedir = site[:saveDir]
-    @devicesfile = site[:devicesFile]
-    @endpointurl = site[:endpointUrl]
-    updateDevices(self)
+    begin
+      @@name = site[:name]
+      @@uids = site[:uids]
+      @@username = site[:username]
+      @@password = site[:password]
+      @@savedir = site[:saveDir]
+      @@devicesfile = site[:devicesFile]
+      @@endpointurl = site[:endpointUrl]
+      @@devices = []
+    rescue => e
+      strace(e)
+    end
   end
+  
+  def name
+    @@name
+  end
+  
+  def uids
+    @@uids
+  end
+  
+  def username
+    @@username
+  end
+  
+  def password
+    @@password
+  end
+  
+  def savedir
+    @@savedir
+  end
+  
+  def devicesfile
+    @@devicesfile
+  end
+  
+  def devices
+    @@devices
+  end
+  
+  def endpointurl
+    @@endpointurl
+  end
+  
 end

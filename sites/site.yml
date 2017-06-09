@@ -8,7 +8,7 @@
   :password: admin
     
   # CSV file listing devices for this site [name, ip, baseurl]
-  :devicesFile: devices.csv    
+  :devicesFile: site.csv    
   
   # Directory to save files into "data" by default
   :saveDir: data

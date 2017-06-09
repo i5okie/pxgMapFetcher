@@ -10,8 +10,9 @@ module PrintLine
     puts "-----------------------------------------".blue
   end
 
-  def self.updating(what)
-    print "Updating: #{what}      ".yellow
+  def self.updating(what, subj='')
+    print "Updating #{what.green}"
+    print " for #{subj.green}" unless subj==''
   end
 
   def self.loading(what)

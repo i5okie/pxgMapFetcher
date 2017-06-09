@@ -1,6 +1,6 @@
 
 class Device
-  extend Support
+  include Support
 
   def initialize(name, ip, url_endpoint)
     @@name = name

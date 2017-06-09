@@ -1,5 +1,5 @@
 require './app/mapfetcher.rb'
-
+require 'smarter_csv'
 
 MapFetcher.startup
 

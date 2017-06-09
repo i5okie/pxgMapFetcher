@@ -4,44 +4,35 @@ require 'colorized_string'
 require './app/support'
 require './app/device'
 require './app/site'
-require './app/printline'
+require './app/printline.rb'
 
 
 module MapFetcher
-  include Support
-
-  def self.init
-    @sites = []
-
-  end
+  extend Support
 
   def self.sites
     @sites
+    attr_accessor :sites
   end
 
   def self.updateSites
-    init
+    @sites = []
     PrintLine.updating('Sites')
     begin
+      print "    Found: "
       Dir.glob('./sites/*.yml') do |config|
         site = YAML.load_file(config)
-        @sites.push Site.new(site)
+        s = Site.new(site)
+        @sites.push s
+        print "#{s.name.green}" unless @sites.length < 1
+        print "," unless @sites.length ==1
+        raise "No sites found".red if @sites.length < 1
       end
-      if sites.length < 1
-        PrintLine.error
-        #raise "Unkown error has occured".red
-      else
-        PrintLine.done
-        puts "Found:"
-        sites.each do |s|
-          print "Site: #{s.name} "
-        end
-      end
-
+      puts
     rescue => e
-      puts "Can't update sites.".white.on_red
+      puts e.message
       strace(e)
-      # raise "Failed"
+      raise "rescue"
     end
   end
 
