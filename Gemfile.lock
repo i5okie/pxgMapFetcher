@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    colorize (0.8.1)
+    net-http-digest_auth (1.4.1)
+    smarter_csv (1.1.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  colorize
+  net-http-digest_auth
+  smarter_csv
+
+BUNDLED WITH
+   1.15.1

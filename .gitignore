@@ -1,0 +1,5 @@
+*.zip
+/pxgMapFetcher
+/packaging/vendor
+/packagiong/traveling-ruby*
+/.c9
