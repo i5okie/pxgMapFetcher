@@ -9,10 +9,15 @@ require './app/printline.rb'
 
 module MapFetcher
   extend Support
-
+  
+  def self.startup
+    @sites = []
+    PrintLine.startup
+    self.updateSites
+  end
+  
   def self.sites
     @sites
-    attr_accessor :sites
   end
 
   def self.updateSites
@@ -23,7 +28,7 @@ module MapFetcher
       Dir.glob('./sites/*.yml') do |config|
         site = YAML.load_file(config)
         s = Site.new(site)
-        @sites.push s
+        sites.push s
         print "#{s.name.green}" unless @sites.length < 1
         print "," unless @sites.length ==1
         raise "No sites found".red if @sites.length < 1
@@ -32,13 +37,8 @@ module MapFetcher
     rescue => e
       puts e.message
       strace(e)
-      raise "rescue"
+      raise "Can't Rescue"
     end
-  end
-
-  def self.startup
-    PrintLine.startup
-    updateSites
   end
 
 end

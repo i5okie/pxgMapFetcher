@@ -12,7 +12,7 @@ module PrintLine
 
   def self.updating(what, subj='')
     print "Updating #{what.green}"
-    print " for #{subj.green}" unless subj==''
+    print "  for #{subj.green}" unless subj==''
   end
 
   def self.loading(what)

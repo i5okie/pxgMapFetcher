@@ -1,52 +1,48 @@
 class Site
-  include Sites
   include Support
   
   def initialize(site)
     begin
-      @@name = site[:name]
-      @@uids = site[:uids]
-      @@username = site[:username]
-      @@password = site[:password]
-      @@savedir = site[:saveDir]
-      @@devicesfile = site[:devicesFile]
-      @@endpointurl = site[:endpointUrl]
-      @@devices = []
+      @name = site[:name]
+      @uids = site[:uids]
+      @username = site[:username]
+      @password = site[:password]
+      @savedir = site[:saveDir]
+      @devicesfile = site[:devicesFile]
+      @endpointurl = site[:endpointUrl]
+      @devices = []
     rescue => e
+      puts e.message
       strace(e)
     end
   end
   
-  def name
-    @@name
+  def updateDeviceList
+    @devices = []
+    PrintLine.updating('Devices',@name)
+    begin
+      dlist = SmarterCSV.process("./sites/#{@devicesfile}")
+      dlist.each do |d|
+        curdev = Device.new(d[:name],d[:ip],@endpointurl)
+        curdev.username = @username
+        curdev.password = @password
+        @devices.push curdev
+      end
+      print "    Found: "
+      puts "#{@devices.count.to_s.green} devices"
+      rescue "Couldn't update device list."
+    rescue => e
+      puts "Error when updating devices.".red
+      puts e.message
+      strace(e)
+    end
+  end  
+  
+  def fetchMaps
+    @@devices.each do |d|
+      puts d.name
+    end
   end
   
-  def uids
-    @@uids
-  end
-  
-  def username
-    @@username
-  end
-  
-  def password
-    @@password
-  end
-  
-  def savedir
-    @@savedir
-  end
-  
-  def devicesfile
-    @@devicesfile
-  end
-  
-  def devices
-    @@devices
-  end
-  
-  def endpointurl
-    @@endpointurl
-  end
-  
+  attr_reader :name, :uids, :username, :password, :devicesfile, :endpointurl, :devices
 end

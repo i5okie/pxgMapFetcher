@@ -2,6 +2,9 @@ require './app/mapfetcher.rb'
 require 'smarter_csv'
 
 MapFetcher.startup
+MapFetcher.sites.each do |s|
+  s.updateDeviceList
+end
 
 # Read list of devices from csv file with IP addresses.
 # print "Getting list of devices from #{cfg[:deviceList]}:"

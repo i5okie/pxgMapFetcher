@@ -21,12 +21,6 @@ module Support
     res = h.request req
     yield res.body
   end
-  
-  def foobar
-    puts 'foobar'.red
-  end
-  
-  
 
   def strace(exception)
     print "\r" << (' ' * 50) << "\n"
@@ -42,30 +36,6 @@ module Support
       puts "Fatal error:\n"
       stacktrace.each { |line| puts line }
       puts
-      raise "Failed"
+      # raise "Failed"
   end
-end
-
-module Sites
-  
-  def updateDevices
-    self.devices = []
-    PrintLine.updating('Devices',@name)
-    begin
-      dlist = SmarterCSV.process("./sites/#{self.devicesfile}")
-      devices = self.devices
-      dlist.each do |d|
-        curdev = Device.new(d[:name],d[:ip],self.endpointurl)
-        curdev.username = self.credentials['username']
-        curdev.password = self.credentials['password']
-        devices.push curdev
-        PrintLine.done
-      end
-    rescue => e
-      puts "Error when updating devices.".red
-      puts e.message
-      strace(e)
-      
-    end
-  end  
 end

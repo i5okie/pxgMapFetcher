@@ -3,29 +3,12 @@ class Device
   include Support
 
   def initialize(name, ip, url_endpoint)
-    @@name = name
-    @@ip = ip
-    @@url_endpoint = url_endpoint
+    @name = name
+    @ip = ip
+    @url = "http://#{ip}/#{url_endpoint}"
+    @username = ""
+    @password = ""
   end
-
-  def name
-    @@name
-  end
-
-  def ip
-    @@ip
-  end
-
-  def url
-    @@url = "http://#{@@ip}/#{@@url_endpoint}"
-    @@url
-  end
-
-  def username
-    @@username
-  end
-
-  def password
-    @password
-  end
+  
+  attr_accessor :name, :ip, :url, :username, :password
 end
