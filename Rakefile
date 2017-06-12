@@ -1,7 +1,7 @@
 require 'bundler/setup'
 
 PACKAGE_NAME = "pxgMapFetcher"
-VERSION = "1.0.0"
+VERSION = "1.5.0"
 TRAVELING_RUBY_VERSION = "20150715-2.2.2"
 
 desc "Package your app"
@@ -49,16 +49,16 @@ def create_package(target, os_type = :unix)
   sh "rm -rf #{package_dir}"
   sh "mkdir -p #{package_dir}/lib/app"
   sh "mkdir #{package_dir}/data"
+  sh "mkdir #{package_dir}/sites"
   sh "cp app.rb #{package_dir}/lib/app/"
-  sh "cp devices.csv #{package_dir}/"
-  sh "cp config.yml #{package_dir}/"
-  sh "cp README #{package_dir}/"
+  sh "cp sites/* #{package_dir}/sites"
+  sh "cp README.md #{package_dir}/"
   sh "mkdir #{package_dir}/lib/ruby"
   sh "tar -xzf packaging/traveling-ruby-#{TRAVELING_RUBY_VERSION}-#{target}.tar.gz -C #{package_dir}/lib/ruby"
   if os_type == :unix
-    sh "cp packaging/wrapper.sh #{package_dir}/fetch"
+    sh "cp packaging/wrapper.sh #{package_dir}/mapFetcher"
   else
-    sh "cp packaging/wrapper.bat #{package_dir}/fetch.bat"
+    sh "cp packaging/wrapper.bat #{package_dir}/mapFetcher.bat"
   end
   sh "cp -pR packaging/vendor #{package_dir}/lib/"
   sh "cp Gemfile Gemfile.lock #{package_dir}/lib/vendor/"

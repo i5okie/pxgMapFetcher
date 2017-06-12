@@ -1,7 +1,7 @@
 # Site configuration file template
 # do not modify modify spaces / indentations / format of the file
   # Site name
-  :name: mysite
+  :name: Site
   
   # username and password used for logging into the device "admin"/"admin" by default
   :username: admin

@@ -39,8 +39,17 @@ class Site
   end  
   
   def fetchMaps
-    @@devices.each do |d|
-      puts d.name
+    print "Downloading Register Maps for #{@name.light_green} with uids: "
+    @uids.each {|u| print "#{u.to_s.light_green}; "}; puts
+    begin
+      savepath = "./#{@savedir}"
+      @devices.each do |d| 
+        d.fetchMaps(@uids, savepath)
+      end
+    rescue => e
+      puts
+      puts e.message.white.on_cyan
+      strace(e)
     end
   end
   

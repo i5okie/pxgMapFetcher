@@ -2,11 +2,9 @@ require 'colorize'
 require 'colorized_string'
 
 module PrintLine
-
-
   def self.startup
     puts "-----------------------------------------".blue
-    puts "     pxgMapFetcher -- MultiSite"
+    puts "     pxgMapFetcher -- MultiSite          ".on_black
     puts "-----------------------------------------".blue
   end
 
