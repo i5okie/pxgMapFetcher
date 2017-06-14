@@ -1,0 +1,42 @@
+# Site configuration file template
+# do not modify modify spaces / indentations / format of the file
+  # Site name
+  :name: example_site
+  
+  # username and password used for logging into the device "admin"/"admin" by default
+  :username: admin
+  :password: admin
+    
+  # CSV file listing devices for this site [name, ip, baseurl]
+  :devicesFile: example_site.csv
+  
+  # Specify Unit IDs
+  # "0" is device itself; 2-17 Summary data for penels 1-15; 18-33 individual breaker data from panels 1-15;
+  :uids: [ 0, 2, 3, 18, 19 ]  
+  
+  # Explaination from the user manual:
+  #  Because the PDU/RPP/RPM consists of several panels of circuit
+  #  breakers, set the Unit ID in the Modbus program to specify a specific
+  #  PDU/RPP/RPM, a specific panel, or a specific breaker (see Table 2).
+  #  The PDU/RPP/RPM has a Unit ID of 0, 1, or 255. The same information
+  #  can be obtained from any of these IDs. See “PDU/RPP/RPM Registers
+  #  and Alarms” on page 65 for more information.
+  #
+  #  The panel Unit IDs range from 2 to 17. These summary data panel
+  #  registers contain the total information for all the breakers in a specific
+  #  panel. For example, the registers show the sum total current for each
+  #  phase distributed by all the breakers. See “Panel Registers and Alarms”
+  #  on page 68 for more information.
+  #
+  #  The breaker Unit IDs range from 18 to 33. These registers provide
+  #  individual breaker data for the specified panel. See “Breaker Data and
+  #  Alarms” on page 71 for more information on identifying specific breaker
+  #  registers.
+
+  # ADVANCED: Do not include these data points (modbus register addresses);
+  #  Review an output modbus table from device to find the addresses.
+  :skipRegisters: [6014, 6078, 1061, 1073, 1085, 1091, 1477, 6268, 6288, 11022, 11027, 4296, 4298, 4300, 5164, 5166, 5168, 6268, 6288, 7620, 7622, 1099, 1101, 1043, 1045, 1047]
+
+  # DO NOT CHANGE
+  :endpointUrl: /content/modbus-tcp.cgi?uid=
+

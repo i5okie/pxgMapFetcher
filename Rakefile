@@ -1,17 +1,30 @@
 require 'bundler/setup'
+require 'colorize'
 
 PACKAGE_NAME = "pxgMapFetcher"
 VERSION = "1.5.0"
 TRAVELING_RUBY_VERSION = "20150715-2.2.2"
 
 desc "Package your app"
-task :package => ['package:linux:x86', 'package:win32']
+task :package => ['package:linux:x86', 'package:win32', 'package:linux:test']
+
+desc "Create and run testbuild"
+task :test => ['package:linux:test'] do
+  puts " --- Running app --- ".black.on_yellow
+  sh "./testBuild/mapFetcher"
+  puts " --- App exited --- ".white.on_red
+end
 
 namespace :package do
   namespace :linux do
     desc "Package your app for Linux x86"
     task :x86 => [:bundle_install, "packaging/traveling-ruby-#{TRAVELING_RUBY_VERSION}-linux-x86.tar.gz"] do
       create_package("linux-x86")
+    end
+    
+    desc "Create a test build"
+    task :test => [:bundle_install, "packaging/traveling-ruby-#{TRAVELING_RUBY_VERSION}-linux-x86.tar.gz"] do
+      create_testbuild("linux-x86")
     end
   end
 
@@ -47,11 +60,9 @@ end
 def create_package(target, os_type = :unix)
   package_dir = "#{PACKAGE_NAME}"
   sh "rm -rf #{package_dir}"
-  sh "mkdir -p #{package_dir}/lib/app"
-  sh "mkdir #{package_dir}/data"
-  sh "mkdir #{package_dir}/sites"
-  sh "cp app.rb #{package_dir}/lib/app/"
-  sh "cp sites/* #{package_dir}/sites"
+  sh "mkdir -p #{package_dir}/lib/pxgMapFetcher/lib"
+  sh "cp app.rb #{package_dir}/lib/pxgMapFetcher/"
+  sh "cp -r lib/* #{package_dir}/lib/pxgMapFetcher/lib/"
   sh "cp README.md #{package_dir}/"
   sh "mkdir #{package_dir}/lib/ruby"
   sh "tar -xzf packaging/traveling-ruby-#{TRAVELING_RUBY_VERSION}-#{target}.tar.gz -C #{package_dir}/lib/ruby"
@@ -72,6 +83,22 @@ def create_package(target, os_type = :unix)
     end
     sh "rm -rf #{package_dir}"
   end
+end
+def create_testbuild(target)
+  package_dir = "testBuild"
+  sh "rm -rf #{package_dir}"
+  sh "mkdir -p #{package_dir}/lib/pxgMapFetcher/lib"
+  sh "cp app.rb #{package_dir}/lib/pxgMapFetcher/"
+  sh "cp -r lib/* #{package_dir}/lib/pxgMapFetcher/lib/"
+  sh "cp README.md #{package_dir}/"
+  sh "mkdir #{package_dir}/lib/ruby"
+  sh "tar -xzf packaging/traveling-ruby-#{TRAVELING_RUBY_VERSION}-#{target}.tar.gz -C #{package_dir}/lib/ruby"
+  sh "cp packaging/wrapper.sh #{package_dir}/mapFetcher"
+  sh "sudo chmod +x #{package_dir}/mapFetcher"
+  sh "cp -pR packaging/vendor #{package_dir}/lib/"
+  sh "cp Gemfile Gemfile.lock #{package_dir}/lib/vendor/"
+  sh "mkdir #{package_dir}/lib/vendor/.bundle"
+  sh "cp packaging/bundler-config #{package_dir}/lib/vendor/.bundle/config"
 end
 
 def download_runtime(target)

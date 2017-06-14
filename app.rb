@@ -1,6 +1,7 @@
-require './app/mapfetcher.rb'
-require 'smarter_csv'
+require_relative './lib/mapfetcher.rb'
 
+
+MapFetcher.trSetup
 MapFetcher.startup
 MapFetcher.sites.each do |s|
   s.updateDeviceList
