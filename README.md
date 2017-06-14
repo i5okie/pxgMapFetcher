@@ -30,8 +30,9 @@ CSV contains UID field and all the data points, register addresses, etc that wer
 Linux
 ---
 `ruby app.rb` will connect to each device and save CSV file per device in the `data` folder
-
 ---
+
+
 
 Details:
 ---
