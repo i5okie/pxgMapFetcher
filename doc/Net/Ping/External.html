@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Net::Ping::External - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="../Ping.html">Net::Ping</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li class="calls-super" ><a href="#method-i-ping">#ping</a>
+    
+    <li class="calls-super" ><a href="#method-i-ping6">#ping6</a>
+    
+    <li ><a href="#method-i-ping-3F">#ping?</a>
+    
+    <li ><a href="#method-i-pingecho">#pingecho</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Net::Ping::External">
+  <h1 id="class-Net::Ping::External" class="class">
+    class Net::Ping::External
+  </h1>
+
+  <section class="description">
+    
+<p>The <a href="External.html">Ping::External</a> class encapsulates methods
+for external (system) pings.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-ping" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ping</span><span
+            class="method-args">(host = @host, count = 1, interval = 1, timeout = @timeout)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Pings the host using your system&#39;s ping utility and checks for any
+errors or warnings. Returns true if successful, or false if not.</p>
+
+<p>If the ping failed then the <a
+href="../Ping.html#attribute-i-exception">Net::Ping#exception</a> method
+should contain a string indicating what went wrong. If the ping succeeded
+then the <a href="../Ping.html#attribute-i-warning">Net::Ping#warning</a>
+method may or may not contain a value.</p>
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="../Ping.html#method-i-ping">Net::Ping#ping</a>
+            </div>
+          
+
+          
+          <div class="method-source-code" id="ping-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/lib/net/ping/external.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ping</span>(<span class="ruby-identifier">host</span> = <span class="ruby-ivar">@host</span>, <span class="ruby-identifier">count</span> = <span class="ruby-value">1</span>, <span class="ruby-identifier">interval</span> = <span class="ruby-value">1</span>, <span class="ruby-identifier">timeout</span> = <span class="ruby-ivar">@timeout</span>)
+
+  <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Count must be an integer&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">count</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Timeout must be a number&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">interval</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Numeric</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">interval</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0.2</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Interval must be a decimal greater than or equal to 0.2&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">host</span>)
+
+  <span class="ruby-identifier">pcmd</span> = [<span class="ruby-string">&#39;ping&#39;</span>]
+  <span class="ruby-identifier">bool</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-keyword">case</span> <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">&#39;host_os&#39;</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/linux/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-string">&#39;-c&#39;</span>, <span class="ruby-identifier">count</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-string">&#39;-W&#39;</span>, <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">host</span>, <span class="ruby-string">&#39;-i&#39;</span>, <span class="ruby-identifier">interval</span>.<span class="ruby-identifier">to_s</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/aix/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-string">&#39;-c&#39;</span>, <span class="ruby-identifier">count</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-string">&#39;-w&#39;</span>, <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">host</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/bsd|osx|mach|darwin/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-string">&#39;-c&#39;</span>, <span class="ruby-identifier">count</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-string">&#39;-t&#39;</span>, <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">host</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/solaris|sunos/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-identifier">host</span>, <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">to_s</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/hpux/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-identifier">host</span>, <span class="ruby-node">&quot;-n#{count.to_s}&quot;</span>, <span class="ruby-string">&#39;-m&#39;</span>, <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">to_s</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/win32|windows|msdos|mswin|cygwin|mingw/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-string">&#39;-n&#39;</span>, <span class="ruby-identifier">count</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-string">&#39;-w&#39;</span>, (<span class="ruby-identifier">timeout</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000</span>).<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">host</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-identifier">host</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">start_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">err</span> = <span class="ruby-keyword">nil</span>
+
+    <span class="ruby-constant">Open3</span>.<span class="ruby-identifier">popen3</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">pcmd</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stdin</span>, <span class="ruby-identifier">stdout</span>, <span class="ruby-identifier">stderr</span>, <span class="ruby-identifier">thread</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">stdin</span>.<span class="ruby-identifier">close</span>
+      <span class="ruby-identifier">err</span> = <span class="ruby-identifier">stderr</span>.<span class="ruby-identifier">gets</span> <span class="ruby-comment"># Can&#39;t chomp yet, might be nil</span>
+
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">thread</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">exitstatus</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">0</span>
+          <span class="ruby-identifier">info</span> = <span class="ruby-identifier">stdout</span>.<span class="ruby-identifier">read</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">info</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/unreachable/ix</span> <span class="ruby-comment"># Windows</span>
+            <span class="ruby-identifier">bool</span> = <span class="ruby-keyword">false</span>
+            <span class="ruby-ivar">@exception</span> = <span class="ruby-string">&quot;host unreachable&quot;</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">bool</span> = <span class="ruby-keyword">true</span>  <span class="ruby-comment"># Success, at least one response.</span>
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">err</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">err</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/warning/i</span>
+            <span class="ruby-ivar">@warning</span> = <span class="ruby-identifier">err</span>.<span class="ruby-identifier">chomp</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+          <span class="ruby-identifier">bool</span> = <span class="ruby-keyword">false</span> <span class="ruby-comment"># Transmission successful, no response.</span>
+          <span class="ruby-ivar">@exception</span> = <span class="ruby-identifier">err</span>.<span class="ruby-identifier">chomp</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">err</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">bool</span> = <span class="ruby-keyword">false</span> <span class="ruby-comment"># An error occurred</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">err</span>
+            <span class="ruby-ivar">@exception</span> = <span class="ruby-identifier">err</span>.<span class="ruby-identifier">chomp</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">stdout</span>.<span class="ruby-identifier">each_line</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/(timed out|could not find host|packet loss)/i</span>
+                <span class="ruby-ivar">@exception</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp</span>
+                <span class="ruby-keyword">break</span>
+              <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">error</span>
+    <span class="ruby-ivar">@exception</span> = <span class="ruby-identifier">error</span>.<span class="ruby-identifier">message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># There is no duration if the ping failed</span>
+  <span class="ruby-ivar">@duration</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">start_time</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">bool</span>
+
+  <span class="ruby-identifier">bool</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="External.html#method-i-ping-3F">ping?</a>, <a href="External.html#method-i-pingecho">pingecho</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ping6" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ping6</span><span
+            class="method-args">(host = @host, count = 1, interval = 1, timeout = @timeout)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="../Ping.html#method-i-ping6">Net::Ping#ping6</a>
+            </div>
+          
+
+          
+          <div class="method-source-code" id="ping6-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/lib/net/ping/external.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ping6</span>(<span class="ruby-identifier">host</span> = <span class="ruby-ivar">@host</span>, <span class="ruby-identifier">count</span> = <span class="ruby-value">1</span>, <span class="ruby-identifier">interval</span> = <span class="ruby-value">1</span>, <span class="ruby-identifier">timeout</span> = <span class="ruby-ivar">@timeout</span>)
+
+  <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Count must be an integer&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">count</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Timeout must be a number&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">interval</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Numeric</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">interval</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0.2</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Interval must be a decimal greater than or equal to 0.2&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">host</span>)
+
+  <span class="ruby-identifier">pcmd</span> = [<span class="ruby-string">&#39;ping6&#39;</span>]
+  <span class="ruby-identifier">bool</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-keyword">case</span> <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-string">&#39;host_os&#39;</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/linux/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-string">&#39;-c&#39;</span>, <span class="ruby-identifier">count</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-string">&#39;-W&#39;</span>, <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">host</span>, <span class="ruby-string">&#39;-i&#39;</span>, <span class="ruby-identifier">interval</span>.<span class="ruby-identifier">to_s</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/aix/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-string">&#39;-c&#39;</span>, <span class="ruby-identifier">count</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-string">&#39;-w&#39;</span>, <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">host</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/bsd|osx|mach|darwin/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-string">&#39;-c&#39;</span>, <span class="ruby-identifier">count</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-string">&#39;-t&#39;</span>, <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">host</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/solaris|sunos/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-identifier">host</span>, <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">to_s</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/hpux/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-identifier">host</span>, <span class="ruby-node">&quot;-n#{count.to_s}&quot;</span>, <span class="ruby-string">&#39;-m&#39;</span>, <span class="ruby-identifier">timeout</span>.<span class="ruby-identifier">to_s</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-regexp">/win32|windows|msdos|mswin|cygwin|mingw/i</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-string">&#39;-n&#39;</span>, <span class="ruby-identifier">count</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-string">&#39;-w&#39;</span>, (<span class="ruby-identifier">timeout</span> <span class="ruby-operator">*</span> <span class="ruby-value">1000</span>).<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">host</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">pcmd</span> <span class="ruby-operator">+=</span> [<span class="ruby-identifier">host</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">start_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">err</span> = <span class="ruby-keyword">nil</span>
+
+    <span class="ruby-constant">Open3</span>.<span class="ruby-identifier">popen3</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">pcmd</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stdin</span>, <span class="ruby-identifier">stdout</span>, <span class="ruby-identifier">stderr</span>, <span class="ruby-identifier">thread</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">stdin</span>.<span class="ruby-identifier">close</span>
+      <span class="ruby-identifier">err</span> = <span class="ruby-identifier">stderr</span>.<span class="ruby-identifier">gets</span> <span class="ruby-comment"># Can&#39;t chomp yet, might be nil</span>
+
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">thread</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">exitstatus</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">0</span>
+          <span class="ruby-identifier">info</span> = <span class="ruby-identifier">stdout</span>.<span class="ruby-identifier">read</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">info</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/unreachable/ix</span> <span class="ruby-comment"># Windows</span>
+            <span class="ruby-identifier">bool</span> = <span class="ruby-keyword">false</span>
+            <span class="ruby-ivar">@exception</span> = <span class="ruby-string">&quot;host unreachable&quot;</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">bool</span> = <span class="ruby-keyword">true</span>  <span class="ruby-comment"># Success, at least one response.</span>
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">err</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">err</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/warning/i</span>
+            <span class="ruby-ivar">@warning</span> = <span class="ruby-identifier">err</span>.<span class="ruby-identifier">chomp</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+          <span class="ruby-identifier">bool</span> = <span class="ruby-keyword">false</span> <span class="ruby-comment"># Transmission successful, no response.</span>
+          <span class="ruby-ivar">@exception</span> = <span class="ruby-identifier">err</span>.<span class="ruby-identifier">chomp</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">err</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">bool</span> = <span class="ruby-keyword">false</span> <span class="ruby-comment"># An error occurred</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">err</span>
+            <span class="ruby-ivar">@exception</span> = <span class="ruby-identifier">err</span>.<span class="ruby-identifier">chomp</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">stdout</span>.<span class="ruby-identifier">each_line</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/(timed out|could not find host|packet loss)/i</span>
+                <span class="ruby-ivar">@exception</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp</span>
+                <span class="ruby-keyword">break</span>
+              <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">error</span>
+    <span class="ruby-ivar">@exception</span> = <span class="ruby-identifier">error</span>.<span class="ruby-identifier">message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># There is no duration if the ping failed</span>
+  <span class="ruby-ivar">@duration</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">start_time</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">bool</span>
+
+  <span class="ruby-identifier">bool</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ping-3F" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">ping?</span><span
+            class="method-args">(host = @host, count = 1, interval = 1, timeout = @timeout)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="External.html#method-i-ping">ping</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-pingecho" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">pingecho</span><span
+            class="method-args">(host = @host, count = 1, interval = 1, timeout = @timeout)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="External.html#method-i-ping">ping</a>
+        </div>
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

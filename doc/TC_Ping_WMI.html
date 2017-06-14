@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class TC_Ping_WMI - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Test::Unit::TestCase
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-shutdown">::shutdown</a>
+    
+    <li ><a href="#method-c-startup">::startup</a>
+    
+    <li ><a href="#method-i-setup">#setup</a>
+    
+    <li ><a href="#method-i-teardown">#teardown</a>
+    
+    <li ><a href="#method-i-test_exception">#test_exception</a>
+    
+    <li ><a href="#method-i-test_ping_basic">#test_ping_basic</a>
+    
+    <li ><a href="#method-i-test_ping_expected_failure">#test_ping_expected_failure</a>
+    
+    <li ><a href="#method-i-test_ping_returns_boolean">#test_ping_returns_boolean</a>
+    
+    <li ><a href="#method-i-test_ping_returns_struct">#test_ping_returns_struct</a>
+    
+    <li ><a href="#method-i-test_ping_with_host">#test_ping_with_host</a>
+    
+    <li ><a href="#method-i-test_ping_with_options">#test_ping_with_options</a>
+    
+    <li ><a href="#method-i-test_pingecho_alias">#test_pingecho_alias</a>
+    
+    <li ><a href="#method-i-test_warning">#test_warning</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-TC_Ping_WMI">
+  <h1 id="class-TC_Ping_WMI" class="class">
+    class TC_Ping_WMI
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-shutdown" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">shutdown</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="shutdown-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">shutdown</span>
+   <span class="ruby-identifier">@@windows</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-startup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">startup</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="startup-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">startup</span>
+   <span class="ruby-identifier">@@windows</span> = <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">ALT_SEPARATOR</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-setup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="setup-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+   <span class="ruby-ivar">@host</span> = <span class="ruby-string">&quot;www.ruby-lang.org&quot;</span>
+   <span class="ruby-ivar">@wmi</span> = <span class="ruby-constant">Ping</span><span class="ruby-operator">::</span><span class="ruby-constant">WMI</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@host</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@windows</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-teardown" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">teardown</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="teardown-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">teardown</span>
+   <span class="ruby-ivar">@host</span> = <span class="ruby-keyword">nil</span>
+   <span class="ruby-ivar">@wmi</span>  = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_exception" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_exception</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_exception-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_exception</span>
+   <span class="ruby-identifier">omit_unless</span>(<span class="ruby-identifier">@@windows</span>, <span class="ruby-string">&#39;skipped on Unix platforms&#39;</span>)
+   <span class="ruby-identifier">assert_respond_to</span>(<span class="ruby-ivar">@wmi</span>, <span class="ruby-value">:exception</span>)
+   <span class="ruby-identifier">assert_nothing_raised</span>{ <span class="ruby-ivar">@wmi</span>.<span class="ruby-identifier">ping</span> }
+   <span class="ruby-identifier">assert_nil</span>(<span class="ruby-ivar">@wmi</span>.<span class="ruby-identifier">exception</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_ping_basic" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_ping_basic</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_ping_basic-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_ping_basic</span>
+   <span class="ruby-identifier">omit_unless</span>(<span class="ruby-identifier">@@windows</span>, <span class="ruby-string">&#39;skipped on Unix platforms&#39;</span>)
+   <span class="ruby-identifier">assert_respond_to</span>(<span class="ruby-ivar">@wmi</span>, <span class="ruby-value">:ping</span>)
+   <span class="ruby-identifier">assert_nothing_raised</span>{ <span class="ruby-ivar">@wmi</span>.<span class="ruby-identifier">ping</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_ping_expected_failure" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_ping_expected_failure</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_ping_expected_failure-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_ping_expected_failure</span>
+   <span class="ruby-identifier">omit_unless</span>(<span class="ruby-identifier">@@windows</span>, <span class="ruby-string">&#39;skipped on Unix platforms&#39;</span>)
+   <span class="ruby-identifier">assert_false</span>(<span class="ruby-constant">Ping</span><span class="ruby-operator">::</span><span class="ruby-constant">WMI</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;bogus&#39;</span>).<span class="ruby-identifier">ping?</span>)
+   <span class="ruby-identifier">assert_false</span>(<span class="ruby-constant">Ping</span><span class="ruby-operator">::</span><span class="ruby-constant">WMI</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;http://www.asdfhjklasdfhlkj.com&#39;</span>).<span class="ruby-identifier">ping?</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_ping_returns_boolean" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_ping_returns_boolean</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_ping_returns_boolean-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_ping_returns_boolean</span>
+   <span class="ruby-identifier">omit_unless</span>(<span class="ruby-identifier">@@windows</span>, <span class="ruby-string">&#39;skipped on Unix platforms&#39;</span>)
+   <span class="ruby-identifier">assert_boolean</span>(<span class="ruby-ivar">@wmi</span>.<span class="ruby-identifier">ping?</span>)
+   <span class="ruby-identifier">assert_boolean</span>(<span class="ruby-ivar">@wmi</span>.<span class="ruby-identifier">ping?</span>(<span class="ruby-ivar">@host</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_ping_returns_struct" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_ping_returns_struct</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_ping_returns_struct-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_ping_returns_struct</span>
+   <span class="ruby-identifier">omit_unless</span>(<span class="ruby-identifier">@@windows</span>, <span class="ruby-string">&#39;skipped on Unix platforms&#39;</span>)
+   <span class="ruby-identifier">assert_kind_of</span>(<span class="ruby-constant">Struct</span><span class="ruby-operator">::</span><span class="ruby-constant">PingStatus</span>, <span class="ruby-ivar">@wmi</span>.<span class="ruby-identifier">ping</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_ping_with_host" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_ping_with_host</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_ping_with_host-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_ping_with_host</span>
+   <span class="ruby-identifier">omit_unless</span>(<span class="ruby-identifier">@@windows</span>, <span class="ruby-string">&#39;skipped on Unix platforms&#39;</span>)
+   <span class="ruby-identifier">assert_nothing_raised</span>{ <span class="ruby-ivar">@wmi</span>.<span class="ruby-identifier">ping</span>(<span class="ruby-ivar">@host</span>) }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_ping_with_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_ping_with_options</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_ping_with_options-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_ping_with_options</span>
+   <span class="ruby-identifier">omit_unless</span>(<span class="ruby-identifier">@@windows</span>, <span class="ruby-string">&#39;skipped on Unix platforms&#39;</span>)
+   <span class="ruby-identifier">assert_nothing_raised</span>{ <span class="ruby-ivar">@wmi</span>.<span class="ruby-identifier">ping</span>(<span class="ruby-ivar">@host</span>, <span class="ruby-value">:NoFragmentation</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>) }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_pingecho_alias" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_pingecho_alias</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_pingecho_alias-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_pingecho_alias</span>
+   <span class="ruby-identifier">omit_unless</span>(<span class="ruby-identifier">@@windows</span>, <span class="ruby-string">&#39;skipped on Unix platforms&#39;</span>)
+   <span class="ruby-identifier">assert_respond_to</span>(<span class="ruby-ivar">@wmi</span>, <span class="ruby-value">:pingecho</span>)
+   <span class="ruby-identifier">assert_nothing_raised</span>{ <span class="ruby-ivar">@wmi</span>.<span class="ruby-identifier">pingecho</span> }
+   <span class="ruby-identifier">assert_nothing_raised</span>{ <span class="ruby-ivar">@wmi</span>.<span class="ruby-identifier">pingecho</span>(<span class="ruby-ivar">@host</span>) }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_warning" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_warning</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_warning-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/test/test_net_ping_wmi.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_warning</span>
+   <span class="ruby-identifier">assert_respond_to</span>(<span class="ruby-ivar">@wmi</span>, <span class="ruby-value">:warning</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

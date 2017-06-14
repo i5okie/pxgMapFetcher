@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Net::Ping::WMI - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="../Ping.html">Net::Ping</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li class="calls-super" ><a href="#method-i-ping">#ping</a>
+    
+    <li ><a href="#method-i-ping-3F">#ping?</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Net::Ping::WMI">
+  <h1 id="class-Net::Ping::WMI" class="class">
+    class Net::Ping::WMI
+  </h1>
+
+  <section class="description">
+    
+<p>The <a href="WMI.html">Ping::WMI</a> class encapsulates the
+Win32_PingStatus <a href="WMI.html">WMI</a> class for MS <a
+href="../../Windows.html">Windows</a>.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="PingStatus">PingStatus
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-ping" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ping</span><span
+            class="method-args">(host = @host, options = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Unlike the ping method for other <a href="../Ping.html">Ping</a>
+subclasses, this version returns a <a
+href="WMI.html#PingStatus">PingStatus</a> struct which contains various
+bits of information about the results of the ping itself, such as response
+time.</p>
+
+<p>In addition, this version allows you to pass certain options that are then
+passed on to the underlying WQL query. See the MSDN documentation on
+Win32_PingStatus for details.</p>
+
+<p>Examples:</p>
+
+<pre class="ruby"><span class="ruby-comment"># Ping with no options</span>
+<span class="ruby-constant">Ping</span><span class="ruby-operator">::</span><span class="ruby-constant">WMI</span>.<span class="ruby-identifier">ping</span>(<span class="ruby-string">&#39;www.perl.com&#39;</span>)
+
+<span class="ruby-comment"># Ping with options</span>
+<span class="ruby-constant">Ping</span><span class="ruby-operator">::</span><span class="ruby-constant">WMI</span>.<span class="ruby-identifier">ping</span>(<span class="ruby-string">&#39;www.perl.com&#39;</span>, :<span class="ruby-constant">BufferSize</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">64</span>, :<span class="ruby-constant">NoFragmentation</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+</pre>
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="../Ping.html#method-i-ping">Net::Ping#ping</a>
+            </div>
+          
+
+          
+          <div class="method-source-code" id="ping-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/lib/net/ping/wmi.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ping</span>(<span class="ruby-identifier">host</span> = <span class="ruby-ivar">@host</span>, <span class="ruby-identifier">options</span> = {})
+   <span class="ruby-keyword">super</span>(<span class="ruby-identifier">host</span>)
+
+   <span class="ruby-identifier">lhost</span> = <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">gethostname</span>
+
+   <span class="ruby-identifier">cs</span> = <span class="ruby-node">&quot;winmgmts:{impersonationLevel=impersonate}!//#{lhost}/root/cimv2&quot;</span>
+   <span class="ruby-identifier">wmi</span> = <span class="ruby-constant">WIN32OLE</span>.<span class="ruby-identifier">connect</span>(<span class="ruby-identifier">cs</span>)
+
+   <span class="ruby-identifier">query</span> = <span class="ruby-node">&quot;select * from win32_pingstatus where address = &#39;#{host}&#39;&quot;</span>
+
+   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">options</span>.<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+         <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+            <span class="ruby-identifier">query</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; and #{key} = &#39;#{value}&#39;&quot;</span>
+         <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">query</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; and #{key} = #{value}&quot;</span>
+         <span class="ruby-keyword">end</span>
+      }
+   <span class="ruby-keyword">end</span>
+
+   <span class="ruby-identifier">status</span> = <span class="ruby-constant">Struct</span><span class="ruby-operator">::</span><span class="ruby-constant">PingStatus</span>.<span class="ruby-identifier">new</span>
+
+   <span class="ruby-identifier">wmi</span>.<span class="ruby-identifier">execquery</span>(<span class="ruby-identifier">query</span>).<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">obj</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">address</span>                           = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">Address</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">buffer_size</span>                       = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">BufferSize</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">no_fragmentation</span>                  = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">NoFragmentation</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">primary_address_resolution_status</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">PrimaryAddressResolutionStatus</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">protocol_address</span>                  = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">ProtocolAddress</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">protocol_address_resolved</span>         = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">ProtocolAddressResolved</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">record_route</span>                      = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">RecordRoute</span> 
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">reply_inconsistency</span>               = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">ReplyInconsistency</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">reply_size</span>                        = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">ReplySize</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">resolve_address_names</span>             = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">ResolveAddressNames</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">response_time</span>                     = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">ResponseTime</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">response_time_to_live</span>             = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">ResponseTimeToLive</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">route_record</span>                      = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">RouteRecord</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">route_record_resolved</span>             = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">RouteRecordResolved</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">source_route</span>                      = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">SourceRoute</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">source_route_type</span>                 = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">SourceRouteType</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">status_code</span>                       = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">StatusCode</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">timeout</span>                           = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">Timeout</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">timestamp_record</span>                  = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">TimeStampRecord</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">timestamp_record_address</span>          = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">TimeStampRecordAddress</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">timestamp_record_address_resolved</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">TimeStampRecordAddressResolved</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">timestamp_route</span>                   = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">TimeStampRoute</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">time_to_live</span>                      = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">TimeToLive</span>
+      <span class="ruby-identifier">status</span>.<span class="ruby-identifier">type_of_service</span>                   = <span class="ruby-identifier">obj</span>.<span class="ruby-constant">TypeOfService</span>
+   }
+
+   <span class="ruby-identifier">status</span>.<span class="ruby-identifier">freeze</span> <span class="ruby-comment"># Read-only data</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ping-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ping?</span><span
+            class="method-args">(host = @host, options = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Unlike <a href="WMI.html#method-i-ping">#ping</a>, this method returns true
+or false to indicate whether or not the ping was successful.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ping-3F-source">
+            <pre><span class="ruby-comment"># File packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/lib/net/ping/wmi.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ping?</span>(<span class="ruby-identifier">host</span> = <span class="ruby-ivar">@host</span>, <span class="ruby-identifier">options</span> = {})
+   <span class="ruby-identifier">ping</span>(<span class="ruby-identifier">host</span>, <span class="ruby-identifier">options</span>).<span class="ruby-identifier">status_code</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>CHANGES - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../../../";
+</script>
+
+<script src="../../../../../../js/jquery.js"></script>
+<script src="../../../../../../js/darkfish.js"></script>
+
+<link href="../../../../../../css/fonts.css" rel="stylesheet">
+<link href="../../../../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-1.7.7+-+22-Jan-2015">1.7.7 - 22-Jan-2015</a>
+    <li><a href="#label-1.7.6+-+13-Dec-2014">1.7.6 - 13-Dec-2014</a>
+    <li><a href="#label-1.7.5+-+2-Nov-2014">1.7.5 - 2-Nov-2014</a>
+    <li><a href="#label-1.7.4+-+16-Apr-2014">1.7.4 - 16-Apr-2014</a>
+    <li><a href="#label-1.7.3+-+3-Apr-2014">1.7.3 - 3-Apr-2014</a>
+    <li><a href="#label-1.7.2+-+21-Jan-2014">1.7.2 - 21-Jan-2014</a>
+    <li><a href="#label-1.7.1+-+26-Sep-2013">1.7.1 - 26-Sep-2013</a>
+    <li><a href="#label-1.7.0+-+25-Aug-2013">1.7.0 - 25-Aug-2013</a>
+    <li><a href="#label-1.6.2+-+8-Aug-2013">1.6.2 - 8-Aug-2013</a>
+    <li><a href="#label-1.6.1+-+17-Jul-2013">1.6.1 - 17-Jul-2013</a>
+    <li><a href="#label-1.6.0+-+19-Mar-2013">1.6.0 - 19-Mar-2013</a>
+    <li><a href="#label-1.5.3+-+29-Feb-2012">1.5.3 - 29-Feb-2012</a>
+    <li><a href="#label-1.5.2+-+4-Nov-2011">1.5.2 - 4-Nov-2011</a>
+    <li><a href="#label-1.5.1+-+15-Sep-2011">1.5.1 - 15-Sep-2011</a>
+    <li><a href="#label-1.5.0+-+3-May-2011">1.5.0 - 3-May-2011</a>
+    <li><a href="#label-1.4.1+-+17-Mar-2011">1.4.1 - 17-Mar-2011</a>
+    <li><a href="#label-1.4.0+-+14-Feb-2011">1.4.0 - 14-Feb-2011</a>
+    <li><a href="#label-1.3.7+-+14-Oct-2010">1.3.7 - 14-Oct-2010</a>
+    <li><a href="#label-1.3.6+-+4-Sep-2010">1.3.6 - 4-Sep-2010</a>
+    <li><a href="#label-1.3.5+-+3-Sep-2010">1.3.5 - 3-Sep-2010</a>
+    <li><a href="#label-1.3.4+-+25-Jun-2010">1.3.4 - 25-Jun-2010</a>
+    <li><a href="#label-1.3.3+-+21-Jun-2010">1.3.3 - 21-Jun-2010</a>
+    <li><a href="#label-1.3.2+-+21-Sep-2009">1.3.2 - 21-Sep-2009</a>
+    <li><a href="#label-1.3.1+-+22-Jul-2009">1.3.1 - 22-Jul-2009</a>
+    <li><a href="#label-1.3.0+-+19-May-2009">1.3.0 - 19-May-2009</a>
+    <li><a href="#label-1.2.3+-+13-Jan-2008">1.2.3 - 13-Jan-2008</a>
+    <li><a href="#label-1.2.2+-+22-Jan-2008">1.2.2 - 22-Jan-2008</a>
+    <li><a href="#label-1.2.1+-+6-Apr-2007">1.2.1 - 6-Apr-2007</a>
+    <li><a href="#label-1.2.0+-+5-Dec-2006">1.2.0 - 5-Dec-2006</a>
+    <li><a href="#label-1.1.1+-+15-Jun-2006">1.1.1 - 15-Jun-2006</a>
+    <li><a href="#label-1.1.0+-+17-Jul-2005">1.1.0 - 17-Jul-2005</a>
+    <li><a href="#label-1.0.1+-+22-Jun-2005">1.0.1 - 22-Jun-2005</a>
+    <li><a href="#label-1.0.0+-+14-Jun-2005">1.0.0 - 14-Jun-2005</a>
+    <li><a href="#label-0.3.1+-+9-Apr-2005">0.3.1 - 9-Apr-2005</a>
+    <li><a href="#label-0.3.0+-+12-Feb-2004">0.3.0 - 12-Feb-2004</a>
+    <li><a href="#label-0.2.3+-+12-Aug-2003">0.2.3 - 12-Aug-2003</a>
+    <li><a href="#label-0.2.2+-+3-Apr-2003">0.2.2 - 3-Apr-2003</a>
+    <li><a href="#label-0.2.1+-+27-Mar-2003">0.2.1 - 27-Mar-2003</a>
+    <li><a href="#label-0.2.0+-+14-Feb-2003">0.2.0 - 14-Feb-2003</a>
+    <li><a href="#label-0.1.0+-+9-Dec-2002">0.1.0 - 9-Dec-2002</a>
+    <li><a href="#label-0.0.1a">0.0.1a</a>
+    <li><a href="#label-0.0.1">0.0.1</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../../../../README_md.html">README</a>
+  
+    <li><a href="../../../../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../lib/templates/example_site_csv.html">example_site.csv</a>
+  
+    <li><a href="../../../../../../packaging/bundler-config.html">bundler-config</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/extensions/x86_64-linux/2_2_0/ffi-1_9_18/gem_build_complete.html">gem.build_complete</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/extensions/x86_64-linux/2_2_0/ffi-1_9_18/gem_make_out.html">gem_make.out</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/extensions/x86_64-linux/2_2_0/ffi-1_9_18/mkmf_log.html">mkmf.log</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/colorize-0_8_1/CHANGELOG.html">CHANGELOG</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/colorize-0_8_1/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/colorize-0_8_1/README_md.html">README</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/colorize-0_8_1/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/colorize-0_8_1/colorize_gemspec.html">colorize.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/COPYING.html">COPYING</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/README_md.html">README</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/Makefile.html">Makefile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/ChangeLog.html">ChangeLog</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/ChangeLog_libffi.html">ChangeLog.libffi</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/ChangeLog_libgcj.html">ChangeLog.libgcj</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/ChangeLog_v1.html">ChangeLog.v1</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/Makefile_am.html">Makefile.am</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/Makefile_in.html">Makefile.in</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/Makefile_vc.html">Makefile.vc</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/Makefile_vc64.html">Makefile.vc64</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/README.html">README</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/acinclude_m4.html">acinclude.m4</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/build-ios_sh.html">build-ios.sh</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/compile.html">compile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/config_guess.html">config.guess</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/config_sub.html">config.sub</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/configure.html">configure</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/configure_ac.html">configure.ac</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/configure_host.html">configure.host</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/depcomp.html">depcomp</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/doc/libffi_info.html">libffi.info</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/doc/stamp-vti.html">stamp-vti</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/doc/version_texi.html">version.texi</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/fficonfig_h_in.html">fficonfig.h.in</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/include/Makefile_am.html">Makefile.am</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/include/Makefile_in.html">Makefile.in</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/install-sh.html">install-sh</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/libffi_pc_in.html">libffi.pc.in</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/libtool-version.html">libtool-version</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/ltmain_sh.html">ltmain.sh</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_cc_maxopt_m4.html">ax_cc_maxopt.m4</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_cflags_warn_all_m4.html">ax_cflags_warn_all.m4</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_check_compiler_flags_m4.html">ax_check_compiler_flags.m4</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_compiler_vendor_m4.html">ax_compiler_vendor.m4</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_configure_args_m4.html">ax_configure_args.m4</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_enable_builddir_m4.html">ax_enable_builddir.m4</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_gcc_archflag_m4.html">ax_gcc_archflag.m4</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_gcc_x86_cpuid_m4.html">ax_gcc_x86_cpuid.m4</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/man/Makefile_am.html">Makefile.am</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/man/Makefile_in.html">Makefile.in</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/man/ffi_3.html">ffi.3</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/man/ffi_call_3.html">ffi_call.3</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/man/ffi_prep_cif_3.html">ffi_prep_cif.3</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/mdate-sh.html">mdate-sh</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/missing.html">missing</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/msvcc_sh.html">msvcc.sh</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/alpha/osf_S.html">osf.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/arm/gentramp_sh.html">gentramp.sh</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/arm/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/arm/trampoline_S.html">trampoline.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/avr32/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/cris/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/frv/eabi_S.html">eabi.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/ia64/unix_S.html">unix.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/m32r/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/m68k/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/mips/n32_S.html">n32.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/mips/o32_S.html">o32.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/moxie/eabi_S.html">eabi.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/pa/hpux32_S.html">hpux32.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/pa/linux_S.html">linux.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/aix_S.html">aix.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/aix_closure_S.html">aix_closure.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/darwin_S.html">darwin.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/darwin_closure_S.html">darwin_closure.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/linux64_S.html">linux64.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/linux64_closure_S.html">linux64_closure.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/ppc_closure_S.html">ppc_closure.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/s390/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/sh/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/sh64/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/sparc/v8_S.html">v8.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/sparc/v9_S.html">v9.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/darwin_S.html">darwin.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/darwin64_S.html">darwin64.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/freebsd_S.html">freebsd.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/unix64_S.html">unix64.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/win32_S.html">win32.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/win64_S.html">win64.S</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/Makefile_am.html">Makefile.am</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/Makefile_in.html">Makefile.in</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/config/default_exp.html">default.exp</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/lib/libffi-dg_exp.html">libffi-dg.exp</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/lib/libffi_exp.html">libffi.exp</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/lib/target-libpath_exp.html">target-libpath.exp</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/lib/wrapper_exp.html">wrapper.exp</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/libffi_call/call_exp.html">call.exp</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/libffi_special/special_exp.html">special.exp</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/texinfo_tex.html">texinfo.tex</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ffi_gemspec.html">ffi.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/gen/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/aarch64-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/arm-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-cygwin/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-darwin/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-freebsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-gnu/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-netbsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-openbsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-solaris/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-windows/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/ia64-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/mips-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/mips64el-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/mipsel-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/powerpc-aix/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/powerpc-darwin/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/powerpc-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/powerpc64-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/s390-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/s390x-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/sparc-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/sparc-solaris/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/sparcv9-solaris/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-cygwin/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-darwin/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-freebsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-netbsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-openbsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-solaris/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-windows/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/libtest/GNUmakefile.html">GNUmakefile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/spec/ffi/LICENSE_SPECS.html">LICENSE.SPECS</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/spec/ffi/fixtures/GNUmakefile.html">GNUmakefile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/spec/spec_opts.html">spec.opts</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/CHANGES.html">CHANGES</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/MANIFEST.html">MANIFEST</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/README.html">README</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/certs/djberg96_pub_pem.html">djberg96_pub.pem</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/ffi-win32-extensions_gemspec.html">ffi-win32-extensions.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-http-digest_auth-1_4_1/History_txt.html">History</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-http-digest_auth-1_4_1/Manifest_txt.html">Manifest</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-http-digest_auth-1_4_1/README_txt.html">README</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-http-digest_auth-1_4_1/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/CHANGES.html">CHANGES</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/MANIFEST.html">MANIFEST</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/README_md.html">README</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/doc/ping_txt.html">ping</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/net-ping_gemspec.html">net-ping.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/README_md.html">README</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/smarter_csv_gemspec.html">smarter_csv.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/basic_csv.html">basic.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/binary_csv.html">binary.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/carriage_returns_n_csv.html">carriage_returns_n.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/carriage_returns_quoted_csv.html">carriage_returns_quoted.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/carriage_returns_r_csv.html">carriage_returns_r.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/carriage_returns_rn_csv.html">carriage_returns_rn.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/chunk_cornercase_csv.html">chunk_cornercase.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/empty_csv.html">empty.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/line_endings_n_csv.html">line_endings_n.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/line_endings_r_csv.html">line_endings_r.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/line_endings_rn_csv.html">line_endings_rn.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/lots_of_columns_csv.html">lots_of_columns.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/malformed_csv.html">malformed.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/malformed_header_csv.html">malformed_header.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/money_csv.html">money.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/no_header_csv.html">no_header.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/numeric_csv.html">numeric.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/pets_csv.html">pets.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/quoted_csv.html">quoted.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/separator_csv.html">separator.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/skip_lines_csv.html">skip_lines.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/valid_unicode_csv.html">valid_unicode.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/with_dashes_csv.html">with_dashes.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/with_dates_csv.html">with_dates.csv</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/spec_opts.html">spec.opts</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/win32-security-0_5_0/MANIFEST.html">MANIFEST</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/win32-security-0_5_0/README.html">README</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/win32-security-0_5_0/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/win32-security-0_5_0/certs/djberg96_pub_pem.html">djberg96_pub.pem</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/gems/win32-security-0_5_0/win32-security_gemspec.html">win32-security.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/specifications/colorize-0_8_1_gemspec.html">colorize-0.8.1.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/specifications/ffi-1_9_18_gemspec.html">ffi-1.9.18.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/specifications/ffi-win32-extensions-1_0_3_gemspec.html">ffi-win32-extensions-1.0.3.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/specifications/net-http-digest_auth-1_4_1_gemspec.html">net-http-digest_auth-1.4.1.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/specifications/net-ping-2_0_1_gemspec.html">net-ping-2.0.1.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/specifications/smarter_csv-1_1_4_gemspec.html">smarter_csv-1.1.4.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/vendor/ruby/2_2_0/specifications/win32-security-0_5_0_gemspec.html">win32-security-0.5.0.gemspec</a>
+  
+    <li><a href="../../../../../../packaging/wrapper_bat.html">wrapper.bat</a>
+  
+    <li><a href="../../../../../../packaging/wrapper_sh.html">wrapper.sh</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page packaging/vendor/ruby/2.2.0/gems/net-ping-2.0.1/CHANGES">
+
+<h2 id="label-1.7.7+-+22-Jan-2015">1.7.7 - 22-Jan-2015<span><a href="#label-1.7.7+-+22-Jan-2015">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Pull request #1 from Mike George. This fixes domains which have http in
+them.</p>
+</li></ul>
+
+<h2 id="label-1.7.6+-+13-Dec-2014">1.7.6 - 13-Dec-2014<span><a href="#label-1.7.6+-+13-Dec-2014">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Changed TCP handling yet again, as it was returning false positives. Thanks
+go to Marcos Piccinini for the spot.</p>
+</li></ul>
+
+<h2 id="label-1.7.5+-+2-Nov-2014">1.7.5 - 2-Nov-2014<span><a href="#label-1.7.5+-+2-Nov-2014">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Added packet count and intervals for external pings. Thanks go to Jack
+Hayter for the patch.</p>
+</li><li>
+<p>No longer report closed TCP port as active. Thanks go to Joshua Yanovski
+for the spot and patch.</p>
+</li></ul>
+
+<h2 id="label-1.7.4+-+16-Apr-2014">1.7.4 - 16-Apr-2014<span><a href="#label-1.7.4+-+16-Apr-2014">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Remove the Timeout block for the Ping::HTTP class because it wasn&#39;t
+working with JRuby. Instead, we use the builtin open_timeout and
+read_timeout accessors on the underlying http request. Thanks go to Ian
+Heggie for the spot.</p>
+</li><li>
+<p>The Ping::HTTP#ping? more robustly parses out the port from the uri
+argument if provided. In addition, the default port is again set back to 80
+as a last resort in the constructor.</p>
+</li><li>
+<p>Added timeout and port tests for the Ping::HTTP class.</p>
+</li><li>
+<p>If a host is unreachable explicitly set the result to false regardless of
+the actual exit status. This appears to only affect <a
+href="../../../../../../Windows.html">Windows</a> 7 and later.</p>
+</li><li>
+<p>Reinstated the Timeout block for the Ping::ICMP class. Without it, threaded
+pings could end up in an infinite loop. Thanks go to muirmanders for the
+spot.</p>
+</li></ul>
+
+<h2 id="label-1.7.3+-+3-Apr-2014">1.7.3 - 3-Apr-2014<span><a href="#label-1.7.3+-+3-Apr-2014">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Removed the Timeout block for the Ping::External class as it apparently
+hasn&#39;t worked with open3 for some time. Instead, it now uses your
+command line ping&#39;s timeout switch. Thanks go to Andrea Bernardo Ciddio
+for the spot.</p>
+</li><li>
+<p>Made ICMP pings thread safe. I think.</p>
+</li><li>
+<p>Removed a redundant Timeout block in the Ping::ICMP class.</p>
+</li><li>
+<p>If an ICMP ping times out, the exception attribute is set to “timeout”.</p>
+</li><li>
+<p>Added explicit support for AIX for the Ping::External class.</p>
+</li><li>
+<p>Bumped minimum required Ruby version to 1.9.3.</p>
+</li></ul>
+
+<h2 id="label-1.7.2+-+21-Jan-2014">1.7.2 - 21-Jan-2014<span><a href="#label-1.7.2+-+21-Jan-2014">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed a bug in the Ping::HTTP constructor where it was not honoring the
+port if provided as the second argument. Thanks go to Florian Anderiasch
+for the spot.</p>
+</li><li>
+<p>Removed win32-open3 require in the Ping::External class since it isn&#39;t
+needed in Ruby 1.9.x or later.</p>
+</li><li>
+<p>Refactored the Ping::External class so that it checks the exit status
+rather than try to parse output. Thanks go to Miguel Tubia for the
+suggestion.</p>
+</li><li>
+<p>Dropped explicit support for <a
+href="../../../../../../Windows.html">Windows</a> XP.</p>
+</li><li>
+<p>Removed reference to win32-open3 in <a
+href="../../../../../../README_md.html">README</a>.</p>
+</li></ul>
+
+<h2 id="label-1.7.1+-+26-Sep-2013">1.7.1 - 26-Sep-2013<span><a href="#label-1.7.1+-+26-Sep-2013">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed a bug in the Ping::TCP class where it could return nil instead of
+false. Thanks go to Grandy Nguyen for the patch.</p>
+</li></ul>
+
+<h2 id="label-1.7.0+-+25-Aug-2013">1.7.0 - 25-Aug-2013<span><a href="#label-1.7.0+-+25-Aug-2013">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Now requires Ruby 1.9.x or later.</p>
+</li><li>
+<p>Replaced the main ping code for the Ping::TCP class. The timeout module
+really doesn&#39;t work very well with sockets, and so a raw socket
+approach combined with IO.select is now used instead.</p>
+</li><li>
+<p>Updates to the doc/ping.txt file.</p>
+</li></ul>
+
+<h2 id="label-1.6.2+-+8-Aug-2013">1.6.2 - 8-Aug-2013<span><a href="#label-1.6.2+-+8-Aug-2013">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed a bug in the ICMP ping helper module. Thanks go to Yuichi Tsunematsu
+for the spot.</p>
+</li><li>
+<p>The win32-security library is not just a development dependency. Thanks
+again go to Yuichi Tsunematsu for the spot.</p>
+</li><li>
+<p>Updated the icmp ping tests.</p>
+</li><li>
+<p>Updated the gemspec for MS <a
+href="../../../../../../Windows.html">Windows</a>.</p>
+</li></ul>
+
+<h2 id="label-1.6.1+-+17-Jul-2013">1.6.1 - 17-Jul-2013<span><a href="#label-1.6.1+-+17-Jul-2013">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Automatically set the scheme to “http” if not present when performing HTTP
+pings. See <a
+href="https://bugs.ruby-lang.org/issues/8645">bugs.ruby-lang.org/issues/8645</a>
+for an issue with the uri library that led to this change. Thanks go to
+Preston Lee for the spot.</p>
+</li><li>
+<p>Removed the windows/system_info dependency, since it added other
+dependencies just to check the <a
+href="../../../../../../Windows.html">Windows</a> version. Instead, I added
+a helper file that adds some needed <a
+href="../../../../../../Windows.html">Windows</a> functions using <a
+href="../../../../../../FFI.html">FFI</a>.</p>
+</li><li>
+<p>Added Rake as a development dependency and updated the <a
+href="../../../../../../Gemfile.html">Gemfile</a> source because Bundler.
+Thanks to Jean-Philippe Doyle for the patches.</p>
+</li><li>
+<p>Added some warning text to the <a
+href="../../../../../../Net/Ping/External.html">Net::Ping::External</a>
+tests for users who are using OpenDNS. In short, you will probably get test
+failures and surprising true results for bad hosts.</p>
+</li></ul>
+
+<h2 id="label-1.6.0+-+19-Mar-2013">1.6.0 - 19-Mar-2013<span><a href="#label-1.6.0+-+19-Mar-2013">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Split out the ldap portion of the code into its own branch.</p>
+</li><li>
+<p>Don&#39;t require resolv-replace on Ruby 1.9.3 or later.</p>
+</li><li>
+<p>Now gets proxy information from the http_proxy, https_proxy, and no_proxy
+environment variables and uses that when making requests. Thanks go to
+Kevin Olbrich for the patch.</p>
+</li></ul>
+
+<h2 id="label-1.5.3+-+29-Feb-2012">1.5.3 - 29-Feb-2012<span><a href="#label-1.5.3+-+29-Feb-2012">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Removed the Windows::Console dependency and replaced it with <a
+href="../../../../../../FFI.html">FFI</a> since there were only two
+functions needed. This had the nice side effect of making it work with
+JRuby, too.</p>
+</li><li>
+<p>Minor cleanup on some multi-variable assignment.</p>
+</li><li>
+<p>Fixed require statements and one test for 1.9.</p>
+</li></ul>
+
+<h2 id="label-1.5.2+-+4-Nov-2011">1.5.2 - 4-Nov-2011<span><a href="#label-1.5.2+-+4-Nov-2011">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>The <a href="../../../../../../Net/Ping/HTTP.html">Net::Ping::HTTP</a>
+class now defaults to using HEAD instead of GET for its ping test. You can
+alter this via the get_request accessor. Thanks got to Balazs Kutil for the
+patch.</p>
+</li><li>
+<p>Added the ssl_verify_mode accessor to the <a
+href="../../../../../../Net/Ping/HTTP.html">Net::Ping::HTTP</a> class,
+which defaults to VERIFY_NONE. This fixes possible warnings resulting from
+missing SSL certificates when using https. Thanks go to Balazs Kutil for
+the patch.</p>
+</li></ul>
+
+<h2 id="label-1.5.1+-+15-Sep-2011">1.5.1 - 15-Sep-2011<span><a href="#label-1.5.1+-+15-Sep-2011">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Use <a href="../../../../../../RbConfig.html">RbConfig</a> on Ruby 1.9 and
+later. Thanks go to Torsten Schönebaum for the patch.</p>
+</li></ul>
+
+<h2 id="label-1.5.0+-+3-May-2011">1.5.0 - 3-May-2011<span><a href="#label-1.5.0+-+3-May-2011">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Added the Net::Ping::LDAP class which allows you to perform LDAP pings.
+Thanks go to Paul Gallagher for adding this.</p>
+</li><li>
+<p>The duration instance variable is now reset to nil on a failed ping. Again,
+thanks go to Paul Gallagher.</p>
+</li></ul>
+
+<h2 id="label-1.4.1+-+17-Mar-2011">1.4.1 - 17-Mar-2011<span><a href="#label-1.4.1+-+17-Mar-2011">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Incorporated changes from Lukas Zapletal that alters the icmp tests to use
+your localhost instead of going outside the network.</p>
+</li><li>
+<p>The http tests were similarly modified courtesy of fakeweb, which is now a
+development dependency. Again, change from Lukas Zapletal.</p>
+</li><li>
+<p>The icmp tests were reworked for <a
+href="../../../../../../Windows.html">Windows</a> Vista and later. This
+required the addition of the win32-security library as a development
+dependency.</p>
+</li><li>
+<p>The <a href="../../../../../../Net/Ping/WMI.html">Net::Ping::WMI</a> class
+is no longer skipped on require or in tests since JRuby now supports
+win32ole.</p>
+</li></ul>
+
+<h2 id="label-1.4.0+-+14-Feb-2011">1.4.0 - 14-Feb-2011<span><a href="#label-1.4.0+-+14-Feb-2011">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Added the redirect_limit accessor for the <a
+href="../../../../../../Net/Ping/HTTP.html">Net::Ping::HTTP</a> class. This
+caps the number of redirects that are allowed before a ping is considered a
+failure. The default is 5.</p>
+</li><li>
+<p>Changed the way in which redirects are detected. Previously I was checking
+against the response class, but decided this was unreliable. I now check
+the response code itself. Any code in the 300 range is considered a
+redirect.</p>
+</li><li>
+<p>The default port for the <a
+href="../../../../../../Net/Ping/HTTP.html">Net::Ping::HTTP</a> class is no
+longer explicitly set to 80, but instead uses the result of the
+URI.parse(uri).port method by default. Note that you can still override the
+port if you explicitly provide one in the constructor.</p>
+</li><li>
+<p>The <a href="../../../../../../Net/Ping/HTTP.html">Net::Ping::HTTP</a>
+class now handles https URI&#39;s properly. Note that you may get a warning
+about peer certificates.</p>
+</li></ul>
+
+<h2 id="label-1.3.7+-+14-Oct-2010">1.3.7 - 14-Oct-2010<span><a href="#label-1.3.7+-+14-Oct-2010">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Wrapped the ICMP ping in a while loop that breaks on success to prevent the
+ping from failing too early. Thanks go to Benny Holmgren for the spot and
+the patch.</p>
+</li></ul>
+
+<h2 id="label-1.3.6+-+4-Sep-2010">1.3.6 - 4-Sep-2010<span><a href="#label-1.3.6+-+4-Sep-2010">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed variable naming issue in <a
+href="../../../../../../Net/Ping/External.html">Net::Ping::External</a>.
+Thanks go to taw for the spot.</p>
+</li><li>
+<p>Added a default Rake task.</p>
+</li><li>
+<p>Refactored the tests for <a
+href="../../../../../../Net/Ping/External.html">Net::Ping::External</a> to
+take advantage of the features of test-unit 2.x.</p>
+</li></ul>
+
+<h2 id="label-1.3.5+-+3-Sep-2010">1.3.5 - 3-Sep-2010<span><a href="#label-1.3.5+-+3-Sep-2010">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Allow for custom user agent in <a
+href="../../../../../../Net/Ping/HTTP.html">Net::Ping::HTTP</a>. Thanks go
+to Michael Reinsch for the patch.</p>
+</li></ul>
+
+<h2 id="label-1.3.4+-+25-Jun-2010">1.3.4 - 25-Jun-2010<span><a href="#label-1.3.4+-+25-Jun-2010">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed a dumb platform bug. Thanks go to Jason Frey for the spot.</p>
+</li></ul>
+
+<h2 id="label-1.3.3+-+21-Jun-2010">1.3.3 - 21-Jun-2010<span><a href="#label-1.3.3+-+21-Jun-2010">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Bug fixes for JRuby on MS <a
+href="../../../../../../Windows.html">Windows</a>. The code now explicitly
+checks for JRuby in a few places to ensure it doesn&#39;t try to load
+unsupported libraries on MS <a
+href="../../../../../../Windows.html">Windows</a>. Thanks go to Rob Schultz
+for the spot and some patches.</p>
+</li><li>
+<p>The <a href="../../../../../../Net/Ping/HTTP.html">Net::Ping::HTTP</a>
+class will no longer fail because a root URI is missing a trailing slash.
+If the URI#path is empty, it now defaults to the root path.</p>
+</li><li>
+<p>The <a href="../../../../../../Rakefile.html">Rakefile</a> tasks and naming
+were refactored.</p>
+</li><li>
+<p>Some tests were refactored to take advantage of test-unit 2.x features, as
+well as make them better and more descriptive in general.</p>
+</li></ul>
+
+<h2 id="label-1.3.2+-+21-Sep-2009">1.3.2 - 21-Sep-2009<span><a href="#label-1.3.2+-+21-Sep-2009">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Doing a &#39;require “net/ping”&#39; was not automatically loading the <a
+href="../../../../../../Net/Ping/WMI.html">Net::Ping::WMI</a> class on MS
+<a href="../../../../../../Windows.html">Windows</a>. This has been fixed.
+Thanks go to Joseph M. for the spot.</p>
+</li><li>
+<p>Removed all $LOAD_PATH mangling for both the library and tests.</p>
+</li><li>
+<p>Fixed a bug in the <a
+href="../../../../../../Net/Ping/HTTP.html">Net::Ping::HTTP</a> class where
+a failed redirect did not set the @exception and @warning instance
+variables properly.</p>
+</li><li>
+<p>The PingStatus struct returned by <a
+href="../../../../../../Net/Ping/WMI.html">Net::Ping::WMI</a> is now
+frozen.</p>
+</li><li>
+<p>The test-unit library was switched from a runtime dependency to a
+development dependency.</p>
+</li><li>
+<p>Added the :gem Rake task that builds a gem.</p>
+</li><li>
+<p>Updated the :gem_install task to use the :gem task as a prerequisite.</p>
+</li><li>
+<p>Updated the dependencies for MS <a
+href="../../../../../../Windows.html">Windows</a>.</p>
+</li><li>
+<p>The Rake test tasks are now more Rakish, e.g. test:tcp instead of test_tcp.</p>
+</li><li>
+<p>Renamed example file names to avoid any potential confusion with actual
+test files.</p>
+</li></ul>
+
+<h2 id="label-1.3.1+-+22-Jul-2009">1.3.1 - 22-Jul-2009<span><a href="#label-1.3.1+-+22-Jul-2009">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Removed class aliases, e.g. use Ping::External, not PingExternal.</p>
+</li><li>
+<p>Minor code change to eliminate a warning that popped up in 1.9.x.</p>
+</li><li>
+<p>The win32-open3 library is removed as a dependency for Ruby 1.9.x.</p>
+</li><li>
+<p>Changed license to Artistic 2.0.</p>
+</li><li>
+<p>Some gemspec and <a href="../../../../../../README_md.html">README</a>
+updates.</p>
+</li></ul>
+
+<h2 id="label-1.3.0+-+19-May-2009">1.3.0 - 19-May-2009<span><a href="#label-1.3.0+-+19-May-2009">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Added the Ping::WMI class for MS <a
+href="../../../../../../Windows.html">Windows</a>. This class encapsulates
+the Win32_PingStatus WMI class. Unlike other ping methods, this one returns
+a struct that contains various bits of information.</p>
+</li><li>
+<p>The <a
+href="../../../../../../Net/Ping/External.html">Net::Ping::External</a>
+class now ensures that handles opened by the open3 call are closed. Thanks
+go to Nick <a href="../../../../../../S.html">S</a>. Kanakakorn for the
+spot and a preliminary patch.</p>
+</li><li>
+<p>The <a href="../../../../../../Net/Ping/ICMP.html">Net::Ping::ICMP</a>
+class now explicitly closes the socket if the call to the
+Socket.pack_sockaddr_in method fails.</p>
+</li><li>
+<p>Some documentation updates.</p>
+</li></ul>
+
+<h2 id="label-1.2.3+-+13-Jan-2008">1.2.3 - 13-Jan-2008<span><a href="#label-1.2.3+-+13-Jan-2008">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed a bug in the checksum private method where it would die on odd data
+sizes. Thanks go to Jake Douglas for the spot.</p>
+</li><li>
+<p>A Socket.get_sockaddr_in call in the Ping::ICMP class is no longer included
+as part of the overall ping time. Thanks go again to Jake Douglas for the
+spot.</p>
+</li><li>
+<p>Added data_size tests to the Ping::ICMP test suite.</p>
+</li><li>
+<p>Renamed and updated the test files. The test-unit 2.x gem is now a
+prerequisite as a result.</p>
+</li></ul>
+
+<h2 id="label-1.2.2+-+22-Jan-2008">1.2.2 - 22-Jan-2008<span><a href="#label-1.2.2+-+22-Jan-2008">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Bug fix for Ping::External where it was not honoring the timeout value.
+Thanks go to Chris Morris for the spot and the patch.</p>
+</li><li>
+<p>Bug fix for Ping::External where non-English output could cause false
+positives on MS <a href="../../../../../../Windows.html">Windows</a> Vista
+or later. This library now requires the windows-pr library on MS <a
+href="../../../../../../Windows.html">Windows</a> systems as a result.</p>
+</li><li>
+<p>Added the Ping::UDP.service_check and Ping::UDP.service_check= class
+methods. This method controls whether or not Errno::ECONNREFUSED or
+Errno::ECONNRESET are considered successful pings or not.</p>
+</li><li>
+<p>The Ping::HTTP class no longer uses the resolv-replace library on MS <a
+href="../../../../../../Windows.html">Windows</a> because it was
+(ironically) causing timeouts.</p>
+</li><li>
+<p>Changed the Ping::TCP.econnrefused method to Ping::TCP.service_check. I
+changed it because I now use a similar method in Ping::UDP, but that
+handles more than Errno::ECONNREFUSED. An alias is provided to provide
+backwards compatibility, but it is considered deprecated and will be
+removed in the 1.3.0 release.</p>
+</li><li>
+<p>Removed the install.rb file. The <a
+href="../../../../../../Rakefile.html">Rakefile</a> now handles
+installation.</p>
+</li></ul>
+
+<h2 id="label-1.2.1+-+6-Apr-2007">1.2.1 - 6-Apr-2007<span><a href="#label-1.2.1+-+6-Apr-2007">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>For the Ping::External class, if a ping attempt results in 100% packet loss
+it is now considered a failed ping, regardless of whether or not an error
+was sent to stdout.</p>
+</li><li>
+<p>Fixed the Ping::External class for OS X.</p>
+</li><li>
+<p>Added a <a href="../../../../../../Rakefile.html">Rakefile</a>.
+Installation and testing should now be run via Rake tasks.</p>
+</li><li>
+<p>Minor fix for the Ping::ICMP class where I had accidentally dup&#39;d some
+aliases. This was harmless, but did cause warnings with -w.</p>
+</li></ul>
+
+<h2 id="label-1.2.0+-+5-Dec-2006">1.2.0 - 5-Dec-2006<span><a href="#label-1.2.0+-+5-Dec-2006">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Internal reorganization - each class now lives in its own file.</p>
+</li><li>
+<p>Added the Ping::ICMP class.  Thanks go to Jos Backus for contributing a
+large part of the code.</p>
+</li><li>
+<p>The host argument is now optional in the constructor.  You can now specify
+it in the ping method instead.  Note that it must be specified in one place
+or the other.</p>
+</li><li>
+<p>Each PingXXX class is now Ping::XXX instead.  However, class name aliases
+have been setup for backwards compatibility for now.</p>
+</li><li>
+<p>The constructor for each Ping types now yields self.</p>
+</li><li>
+<p>Added the pingecho alias for the ping method for each Ping type.</p>
+</li><li>
+<p>Added the Ping::HTTP#follow_redirect accessor.</p>
+</li><li>
+<p>The Ping::HTTP#ping method now honors the timeout value.</p>
+</li><li>
+<p>The Ping::HTTP class now follows redirects automatically, though this is
+configurable with the follow_redirect accessor.</p>
+</li><li>
+<p>The Ping::TCP.ecr and Ping::TCP.ecr= methods are now true class method
+aliases (they were just wrappers previously).</p>
+</li><li>
+<p>The Ping::UDP class now enforces a 64 character limit on data that can be
+sent on a udp ping.</p>
+</li><li>
+<p>Updated the gemspec.  Specifically, MS <a
+href="../../../../../../Windows.html">Windows</a> now has a dependency on
+the win32-open3 package.</p>
+</li><li>
+<p>Added inline rdoc.</p>
+</li></ul>
+
+<h2 id="label-1.1.1+-+15-Jun-2006">1.1.1 - 15-Jun-2006<span><a href="#label-1.1.1+-+15-Jun-2006">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed a bug in PingTCP (bad variable name).  Thanks go to Anoop Chandran
+for the spot.</p>
+</li><li>
+<p>Minor variable name refactoring.</p>
+</li><li>
+<p>Minor test updates.</p>
+</li></ul>
+
+<h2 id="label-1.1.0+-+17-Jul-2005">1.1.0 - 17-Jul-2005<span><a href="#label-1.1.0+-+17-Jul-2005">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed a bug in the PingHTTP#ping method where I was accidentally passing
+the timeout value instead of the port number as the third argument to
+Net::HTTP.get_response.</p>
+</li><li>
+<p>The PingHTTP.new method now has a default port of 80.</p>
+</li><li>
+<p>Minor doc update for PingHTTP.new.</p>
+</li></ul>
+
+<h2 id="label-1.0.1+-+22-Jun-2005">1.0.1 - 22-Jun-2005<span><a href="#label-1.0.1+-+22-Jun-2005">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Bug fix for the install.rb file.  The gem is unaffected.</p>
+</li></ul>
+
+<h2 id="label-1.0.0+-+14-Jun-2005">1.0.0 - 14-Jun-2005<span><a href="#label-1.0.0+-+14-Jun-2005">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Renamed project from net-pingsimple to just net-ping.</p>
+</li><li>
+<p>Added a PingHTTP subclass.</p>
+</li><li>
+<p>Moved project to RubyForge.</p>
+</li><li>
+<p>Added a gemspec.</p>
+</li></ul>
+
+<h2 id="label-0.3.1+-+9-Apr-2005">0.3.1 - 9-Apr-2005<span><a href="#label-0.3.1+-+9-Apr-2005">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Updated PingExternal to use win32/open3 on <a
+href="../../../../../../Win32.html">Win32</a> platforms.</p>
+</li><li>
+<p>Minor error handling change for the PingSimple.econnrefused= method.  It
+now raises an ArgumentError if any values other than true or false are
+passed.</p>
+</li><li>
+<p>PingSimple#warning and PingSimple#exception are now read-only methods.</p>
+</li><li>
+<p>The warning and exception attributes are now reset to nil between each call
+to ping.</p>
+</li><li>
+<p>The data and data= methods are now unique to the PingUDP class.</p>
+</li><li>
+<p>The time and time= methods have been changed to timeout and timeout=,
+respectively.</p>
+</li><li>
+<p>Removed the pingsimple.rd and pingsimple.html files.  The pingsimple.txt
+file has been reorganized and is now rdoc friendly.</p>
+</li><li>
+<p>Added a few sample programs under the &#39;examples&#39; directory.</p>
+</li><li>
+<p>Some minor test updates and changes.</p>
+</li><li>
+<p>Removed the INSTALL file.  That information is now in the <a
+href="../../../../../../README_md.html">README</a> file.</p>
+</li><li>
+<p>Now requires Ruby 1.8.0 or later.</p>
+</li></ul>
+
+<h2 id="label-0.3.0+-+12-Feb-2004">0.3.0 - 12-Feb-2004<span><a href="#label-0.3.0+-+12-Feb-2004">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed ping string for PingExternal class based on platform.  The old string
+was really only good for Linux and *BSD.</p>
+</li><li>
+<p>Added <a href="../../../../../../Win32.html">Win32</a> support (requires
+win32_popen package).</p>
+</li><li>
+<p>Added warranty info.</p>
+</li></ul>
+
+<h2 id="label-0.2.3+-+12-Aug-2003">0.2.3 - 12-Aug-2003<span><a href="#label-0.2.3+-+12-Aug-2003">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed a bug in PingExternal that could consume file descriptors if used in
+a loop</p>
+</li><li>
+<p>Added some initialization to avoid -w warnings</p>
+</li><li>
+<p>Removed VERSION() class method.  Use the constant instead</p>
+</li><li>
+<p>Modified test suite slightly</p>
+</li><li>
+<p>Moved rd2 docs to doc directory</p>
+</li></ul>
+
+<h2 id="label-0.2.2+-+3-Apr-2003">0.2.2 - 3-Apr-2003<span><a href="#label-0.2.2+-+3-Apr-2003">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed handling of stdout in PingExternal</p>
+</li></ul>
+
+<h2 id="label-0.2.1+-+27-Mar-2003">0.2.1 - 27-Mar-2003<span><a href="#label-0.2.1+-+27-Mar-2003">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Fixed major bug with PingExternal class with regards to down hosts</p>
+</li><li>
+<p>Exceptions and warnings from PingExternal are now chomp&#39;d</p>
+</li><li>
+<p>Modified test suite</p>
+</li><li>
+<p>Doc updates</p>
+</li></ul>
+
+<h2 id="label-0.2.0+-+14-Feb-2003">0.2.0 - 14-Feb-2003<span><a href="#label-0.2.0+-+14-Feb-2003">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>The default behavior of PingTCP with regards to ECONNREFUSED is now
+configurable</p>
+</li><li>
+<p>Added a VERSION constant and method (to the base class)</p>
+</li><li>
+<p>Added a test suite (for those with testunit installed)</p>
+</li><li>
+<p>Doc changes, rearrangement and general cleanup</p>
+</li><li>
+<p><a href="../net-http-digest_auth-1_4_1/Manifest_txt.html">Manifest</a> is
+now <a href="../ffi-win32-extensions-1_0_3/MANIFEST.html">MANIFEST</a></p>
+</li><li>
+<p>Added an INSTALL file</p>
+</li></ul>
+
+<h2 id="label-0.1.0+-+9-Dec-2002">0.1.0 - 9-Dec-2002<span><a href="#label-0.1.0+-+9-Dec-2002">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Added ping? alias for ping method</p>
+</li><li>
+<p>Warnings now handled separately</p>
+</li><li>
+<p>Corrected a mis-named variable in Ping::External</p>
+</li><li>
+<p>Fixed the install.rb file</p>
+</li><li>
+<p>Updated and added docs</p>
+</li><li>
+<p>Renamed tarball to net-pingsimple to reflect RAA naming convention</p>
+</li></ul>
+
+<h2 id="label-0.0.1a">0.0.1a<span><a href="#label-0.0.1a">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Did this release ever happen?</p>
+</li></ul>
+
+<h2 id="label-0.0.1">0.0.1<span><a href="#label-0.0.1">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Initial release.</p>
+</li></ul>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>o32.S - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../../../../../../../../";
+</script>
+
+<script src="../../../../../../../../../../../js/jquery.js"></script>
+<script src="../../../../../../../../../../../js/darkfish.js"></script>
+
+<link href="../../../../../../../../../../../css/fonts.css" rel="stylesheet">
+<link href="../../../../../../../../../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../../../../../../../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../../../../../../../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../../../../../../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../../../../../../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../../../../../../../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../../../../../../../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../../../../../../../../../README_md.html">README</a>
+  
+    <li><a href="../../../../../../../../../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../../../../../../lib/templates/example_site_csv.html">example_site.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/bundler-config.html">bundler-config</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/extensions/x86_64-linux/2_2_0/ffi-1_9_18/gem_build_complete.html">gem.build_complete</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/extensions/x86_64-linux/2_2_0/ffi-1_9_18/gem_make_out.html">gem_make.out</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/extensions/x86_64-linux/2_2_0/ffi-1_9_18/mkmf_log.html">mkmf.log</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/colorize-0_8_1/CHANGELOG.html">CHANGELOG</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/colorize-0_8_1/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/colorize-0_8_1/README_md.html">README</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/colorize-0_8_1/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/colorize-0_8_1/colorize_gemspec.html">colorize.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/COPYING.html">COPYING</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/README_md.html">README</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/Makefile.html">Makefile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/ChangeLog.html">ChangeLog</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/ChangeLog_libffi.html">ChangeLog.libffi</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/ChangeLog_libgcj.html">ChangeLog.libgcj</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/ChangeLog_v1.html">ChangeLog.v1</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/Makefile_am.html">Makefile.am</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/Makefile_in.html">Makefile.in</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/Makefile_vc.html">Makefile.vc</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/Makefile_vc64.html">Makefile.vc64</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/README.html">README</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/acinclude_m4.html">acinclude.m4</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/build-ios_sh.html">build-ios.sh</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/compile.html">compile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/config_guess.html">config.guess</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/config_sub.html">config.sub</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/configure.html">configure</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/configure_ac.html">configure.ac</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/configure_host.html">configure.host</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/depcomp.html">depcomp</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/doc/libffi_info.html">libffi.info</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/doc/stamp-vti.html">stamp-vti</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/doc/version_texi.html">version.texi</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/fficonfig_h_in.html">fficonfig.h.in</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/include/Makefile_am.html">Makefile.am</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/include/Makefile_in.html">Makefile.in</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/install-sh.html">install-sh</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/libffi_pc_in.html">libffi.pc.in</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/libtool-version.html">libtool-version</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/ltmain_sh.html">ltmain.sh</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_cc_maxopt_m4.html">ax_cc_maxopt.m4</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_cflags_warn_all_m4.html">ax_cflags_warn_all.m4</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_check_compiler_flags_m4.html">ax_check_compiler_flags.m4</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_compiler_vendor_m4.html">ax_compiler_vendor.m4</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_configure_args_m4.html">ax_configure_args.m4</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_enable_builddir_m4.html">ax_enable_builddir.m4</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_gcc_archflag_m4.html">ax_gcc_archflag.m4</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/m4/ax_gcc_x86_cpuid_m4.html">ax_gcc_x86_cpuid.m4</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/man/Makefile_am.html">Makefile.am</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/man/Makefile_in.html">Makefile.in</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/man/ffi_3.html">ffi.3</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/man/ffi_call_3.html">ffi_call.3</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/man/ffi_prep_cif_3.html">ffi_prep_cif.3</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/mdate-sh.html">mdate-sh</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/missing.html">missing</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/msvcc_sh.html">msvcc.sh</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/alpha/osf_S.html">osf.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/arm/gentramp_sh.html">gentramp.sh</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/arm/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/arm/trampoline_S.html">trampoline.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/avr32/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/cris/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/frv/eabi_S.html">eabi.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/ia64/unix_S.html">unix.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/m32r/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/m68k/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/mips/n32_S.html">n32.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/mips/o32_S.html">o32.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/moxie/eabi_S.html">eabi.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/pa/hpux32_S.html">hpux32.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/pa/linux_S.html">linux.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/aix_S.html">aix.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/aix_closure_S.html">aix_closure.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/darwin_S.html">darwin.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/darwin_closure_S.html">darwin_closure.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/linux64_S.html">linux64.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/linux64_closure_S.html">linux64_closure.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/ppc_closure_S.html">ppc_closure.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/powerpc/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/s390/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/sh/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/sh64/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/sparc/v8_S.html">v8.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/sparc/v9_S.html">v9.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/darwin_S.html">darwin.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/darwin64_S.html">darwin64.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/freebsd_S.html">freebsd.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/sysv_S.html">sysv.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/unix64_S.html">unix64.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/win32_S.html">win32.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/src/x86/win64_S.html">win64.S</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/Makefile_am.html">Makefile.am</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/Makefile_in.html">Makefile.in</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/config/default_exp.html">default.exp</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/lib/libffi-dg_exp.html">libffi-dg.exp</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/lib/libffi_exp.html">libffi.exp</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/lib/target-libpath_exp.html">target-libpath.exp</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/lib/wrapper_exp.html">wrapper.exp</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/libffi_call/call_exp.html">call.exp</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/testsuite/libffi_special/special_exp.html">special.exp</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ext/ffi_c/libffi/texinfo_tex.html">texinfo.tex</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/ffi_gemspec.html">ffi.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/gen/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/aarch64-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/arm-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-cygwin/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-darwin/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-freebsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-gnu/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-netbsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-openbsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-solaris/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/i386-windows/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/ia64-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/mips-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/mips64el-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/mipsel-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/powerpc-aix/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/powerpc-darwin/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/powerpc-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/powerpc64-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/s390-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/s390x-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/sparc-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/sparc-solaris/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/sparcv9-solaris/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-cygwin/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-darwin/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-freebsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-linux/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-netbsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-openbsd/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-solaris/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/lib/ffi/platform/x86_64-windows/types_conf.html">types.conf</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/libtest/GNUmakefile.html">GNUmakefile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/spec/ffi/LICENSE_SPECS.html">LICENSE.SPECS</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/spec/ffi/fixtures/GNUmakefile.html">GNUmakefile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-1_9_18/spec/spec_opts.html">spec.opts</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/CHANGES.html">CHANGES</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/MANIFEST.html">MANIFEST</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/README.html">README</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/certs/djberg96_pub_pem.html">djberg96_pub.pem</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/ffi-win32-extensions-1_0_3/ffi-win32-extensions_gemspec.html">ffi-win32-extensions.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-http-digest_auth-1_4_1/History_txt.html">History</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-http-digest_auth-1_4_1/Manifest_txt.html">Manifest</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-http-digest_auth-1_4_1/README_txt.html">README</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-http-digest_auth-1_4_1/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/CHANGES.html">CHANGES</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/MANIFEST.html">MANIFEST</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/README_md.html">README</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/doc/ping_txt.html">ping</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/net-ping-2_0_1/net-ping_gemspec.html">net-ping.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/README_md.html">README</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/smarter_csv_gemspec.html">smarter_csv.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/basic_csv.html">basic.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/binary_csv.html">binary.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/carriage_returns_n_csv.html">carriage_returns_n.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/carriage_returns_quoted_csv.html">carriage_returns_quoted.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/carriage_returns_r_csv.html">carriage_returns_r.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/carriage_returns_rn_csv.html">carriage_returns_rn.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/chunk_cornercase_csv.html">chunk_cornercase.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/empty_csv.html">empty.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/line_endings_n_csv.html">line_endings_n.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/line_endings_r_csv.html">line_endings_r.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/line_endings_rn_csv.html">line_endings_rn.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/lots_of_columns_csv.html">lots_of_columns.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/malformed_csv.html">malformed.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/malformed_header_csv.html">malformed_header.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/money_csv.html">money.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/no_header_csv.html">no_header.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/numeric_csv.html">numeric.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/pets_csv.html">pets.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/quoted_csv.html">quoted.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/separator_csv.html">separator.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/skip_lines_csv.html">skip_lines.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/valid_unicode_csv.html">valid_unicode.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/with_dashes_csv.html">with_dashes.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/fixtures/with_dates_csv.html">with_dates.csv</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/smarter_csv-1_1_4/spec/spec_opts.html">spec.opts</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/win32-security-0_5_0/MANIFEST.html">MANIFEST</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/win32-security-0_5_0/README.html">README</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/win32-security-0_5_0/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/win32-security-0_5_0/certs/djberg96_pub_pem.html">djberg96_pub.pem</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/gems/win32-security-0_5_0/win32-security_gemspec.html">win32-security.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/specifications/colorize-0_8_1_gemspec.html">colorize-0.8.1.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/specifications/ffi-1_9_18_gemspec.html">ffi-1.9.18.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/specifications/ffi-win32-extensions-1_0_3_gemspec.html">ffi-win32-extensions-1.0.3.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/specifications/net-http-digest_auth-1_4_1_gemspec.html">net-http-digest_auth-1.4.1.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/specifications/net-ping-2_0_1_gemspec.html">net-ping-2.0.1.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/specifications/smarter_csv-1_1_4_gemspec.html">smarter_csv-1.1.4.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/vendor/ruby/2_2_0/specifications/win32-security-0_5_0_gemspec.html">win32-security-0.5.0.gemspec</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/wrapper_bat.html">wrapper.bat</a>
+  
+    <li><a href="../../../../../../../../../../../packaging/wrapper_sh.html">wrapper.sh</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page packaging/vendor/ruby/2.2.0/gems/ffi-1.9.18/ext/ffi_c/libffi/src/mips/o32.S">
+
+<pre>-----------------------------------------------------------------------
+o32.S - Copyright (c) 1996, 1998, 2005  Red Hat, Inc.
+
+MIPS Foreign Function Interface 
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+``Software&#39;&#39;), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED ``AS IS&#39;&#39;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+-----------------------------------------------------------------------</pre>
+
+<p>define LIBFFI_ASM</p>
+
+<p>include &lt;fficonfig.h&gt; include &lt;ffi.h&gt;</p>
+
+<pre>Only build this code if we are compiling for o32</pre>
+
+<p>if defined(FFI_MIPS_O32)</p>
+
+<p>define callback a0 define bytes    a2 define flags    a3</p>
+
+<p>define SIZEOF_FRAME    (4 * FFI_SIZEOF_ARG + 2 * FFI_SIZEOF_ARG) define
+A3_OFF          (SIZEOF_FRAME + 3 * FFI_SIZEOF_ARG) define FP_OFF         
+(SIZEOF_FRAME - 2 * FFI_SIZEOF_ARG) define RA_OFF          (SIZEOF_FRAME -
+1 * FFI_SIZEOF_ARG)</p>
+
+<pre>.abicalls
+.text
+.align  2
+.globl  ffi_call_O32
+.ent    ffi_call_O32</pre>
+
+<p>ffi_call_O32:</p>
+
+<p>$LFB0:</p>
+
+<pre class="ruby"><span class="ruby-comment"># Prologue</span>
+<span class="ruby-constant">SUBU</span>    <span class="ruby-identifier">$sp</span>, <span class="ruby-constant">SIZEOF_FRAME</span>       <span class="ruby-comment"># Frame size</span>
+</pre>
+
+<p>$LCFI0:</p>
+
+<pre class="ruby"><span class="ruby-constant">REG_S</span>   <span class="ruby-identifier">$fp</span>, <span class="ruby-constant">FP_OFF</span>(<span class="ruby-identifier">$sp</span>)        <span class="ruby-comment"># Save frame pointer</span>
+</pre>
+
+<p>$LCFI1:</p>
+
+<pre class="ruby"><span class="ruby-constant">REG_S</span>   <span class="ruby-identifier">ra</span>, <span class="ruby-constant">RA_OFF</span>(<span class="ruby-identifier">$sp</span>)         <span class="ruby-comment"># Save return address</span>
+</pre>
+
+<p>$LCFI2:</p>
+
+<pre class="ruby"><span class="ruby-identifier">move</span>    <span class="ruby-identifier">$fp</span>, <span class="ruby-identifier">$sp</span>
+</pre>
+
+<p>$LCFI3:</p>
+
+<pre>move    t9, callback            # callback function pointer
+REG_S   flags, A3_OFF($fp)      # flags
+
+# Allocate at least 4 words in the argstack
+LI      v0, 4 * FFI_SIZEOF_ARG
+blt     bytes, v0, sixteen
+
+ADDU    v0, bytes, 7    # make sure it is aligned 
+and     v0, -8          # to an 8 byte boundry</pre>
+
+<p>sixteen:</p>
+
+<pre>SUBU    $sp, v0         # move the stack pointer to reflect the
+                        # arg space
+
+ADDU    a0, $sp, 4 * FFI_SIZEOF_ARG
+
+jalr    t9
+
+REG_L   t0, A3_OFF($fp)         # load the flags word
+SRL     t2, t0, 4               # shift our arg info
+and     t0, ((1&lt;&lt;4)-1)          # mask out the return type
+
+ADDU    $sp, 4 * FFI_SIZEOF_ARG         # adjust $sp to new args
+
+bnez    t0, pass_d                      # make it quick for int
+REG_L   a0, 0*FFI_SIZEOF_ARG($sp)       # just go ahead and load the
+REG_L   a1, 1*FFI_SIZEOF_ARG($sp)       # four regs.
+REG_L   a2, 2*FFI_SIZEOF_ARG($sp)
+REG_L   a3, 3*FFI_SIZEOF_ARG($sp)
+b       call_it</pre>
+
+<p>pass_d:</p>
+
+<pre class="ruby"><span class="ruby-identifier">bne</span>     <span class="ruby-identifier">t0</span>, <span class="ruby-constant">FFI_ARGS_D</span>, <span class="ruby-identifier">pass_f</span>
+<span class="ruby-identifier">l</span>.<span class="ruby-identifier">d</span>     <span class="ruby-identifier">$f12</span>, <span class="ruby-value">0</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># load $fp regs from args</span>
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">a2</span>,   <span class="ruby-value">2</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># passing a double</span>
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">a3</span>,   <span class="ruby-value">3</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)
+<span class="ruby-identifier">b</span>       <span class="ruby-identifier">call_it</span>
+</pre>
+
+<p>pass_f:</p>
+
+<pre class="ruby"><span class="ruby-identifier">bne</span>     <span class="ruby-identifier">t0</span>, <span class="ruby-constant">FFI_ARGS_F</span>, <span class="ruby-identifier">pass_d_d</span>
+<span class="ruby-identifier">l</span>.<span class="ruby-identifier">s</span>     <span class="ruby-identifier">$f12</span>, <span class="ruby-value">0</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># load $fp regs from args</span>
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">a1</span>,   <span class="ruby-value">1</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># passing a float</span>
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">a2</span>,   <span class="ruby-value">2</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">a3</span>,   <span class="ruby-value">3</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)
+<span class="ruby-identifier">b</span>       <span class="ruby-identifier">call_it</span>
+</pre>
+
+<p>pass_d_d:</p>
+
+<pre class="ruby"><span class="ruby-identifier">bne</span>     <span class="ruby-identifier">t0</span>, <span class="ruby-constant">FFI_ARGS_DD</span>, <span class="ruby-identifier">pass_f_f</span>
+<span class="ruby-identifier">l</span>.<span class="ruby-identifier">d</span>     <span class="ruby-identifier">$f12</span>, <span class="ruby-value">0</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># load $fp regs from args</span>
+<span class="ruby-identifier">l</span>.<span class="ruby-identifier">d</span>     <span class="ruby-identifier">$f14</span>, <span class="ruby-value">2</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># passing two doubles</span>
+<span class="ruby-identifier">b</span>       <span class="ruby-identifier">call_it</span>
+</pre>
+
+<p>pass_f_f:</p>
+
+<pre class="ruby"><span class="ruby-identifier">bne</span>     <span class="ruby-identifier">t0</span>, <span class="ruby-constant">FFI_ARGS_FF</span>, <span class="ruby-identifier">pass_d_f</span>
+<span class="ruby-identifier">l</span>.<span class="ruby-identifier">s</span>     <span class="ruby-identifier">$f12</span>, <span class="ruby-value">0</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># load $fp regs from args</span>
+<span class="ruby-identifier">l</span>.<span class="ruby-identifier">s</span>     <span class="ruby-identifier">$f14</span>, <span class="ruby-value">1</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># passing two floats</span>
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">a2</span>,   <span class="ruby-value">2</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">a3</span>,   <span class="ruby-value">3</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)
+<span class="ruby-identifier">b</span>       <span class="ruby-identifier">call_it</span>
+</pre>
+
+<p>pass_d_f:</p>
+
+<pre class="ruby"><span class="ruby-identifier">bne</span>     <span class="ruby-identifier">t0</span>, <span class="ruby-constant">FFI_ARGS_DF</span>, <span class="ruby-identifier">pass_f_d</span>
+<span class="ruby-identifier">l</span>.<span class="ruby-identifier">d</span>     <span class="ruby-identifier">$f12</span>, <span class="ruby-value">0</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># load $fp regs from args</span>
+<span class="ruby-identifier">l</span>.<span class="ruby-identifier">s</span>     <span class="ruby-identifier">$f14</span>, <span class="ruby-value">2</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># passing double and float</span>
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">a3</span>,   <span class="ruby-value">3</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)
+<span class="ruby-identifier">b</span>       <span class="ruby-identifier">call_it</span>
+</pre>
+
+<p>pass_f_d:</p>
+
+<pre class="ruby"><span class="ruby-comment"># assume that the only other combination must be float then double</span>
+<span class="ruby-comment">#      bne     t0, FFI_ARGS_F_D, call_it</span>
+       <span class="ruby-identifier">l</span>.<span class="ruby-identifier">s</span>     <span class="ruby-identifier">$f12</span>, <span class="ruby-value">0</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># load $fp regs from args</span>
+       <span class="ruby-identifier">l</span>.<span class="ruby-identifier">d</span>     <span class="ruby-identifier">$f14</span>, <span class="ruby-value">2</span><span class="ruby-operator">*</span><span class="ruby-constant">FFI_SIZEOF_ARG</span>(<span class="ruby-identifier">$sp</span>)     <span class="ruby-comment"># passing double and float</span>
+</pre>
+
+<p>call_it:</p>
+
+<pre># Load the function pointer
+REG_L   t9, SIZEOF_FRAME + 5*FFI_SIZEOF_ARG($fp)
+
+# If the return value pointer is NULL, assume no return value.
+REG_L   t1, SIZEOF_FRAME + 4*FFI_SIZEOF_ARG($fp)
+beqz    t1, noretval
+
+bne     t2, FFI_TYPE_INT, retlonglong
+jalr    t9
+REG_L   t0, SIZEOF_FRAME + 4*FFI_SIZEOF_ARG($fp)
+REG_S   v0, 0(t0)
+b       epilogue</pre>
+
+<p>retlonglong:</p>
+
+<pre># Really any 64-bit int, signed or not.
+bne     t2, FFI_TYPE_UINT64, retfloat
+jalr    t9
+REG_L   t0, SIZEOF_FRAME + 4*FFI_SIZEOF_ARG($fp)
+REG_S   v1, 4(t0)
+REG_S   v0, 0(t0)
+b       epilogue</pre>
+
+<p>retfloat:</p>
+
+<pre>bne     t2, FFI_TYPE_FLOAT, retdouble
+jalr    t9
+REG_L   t0, SIZEOF_FRAME + 4*FFI_SIZEOF_ARG($fp)
+s.s     $f0, 0(t0)
+b       epilogue</pre>
+
+<p>retdouble:</p>
+
+<pre>bne     t2, FFI_TYPE_DOUBLE, noretval
+jalr    t9
+REG_L   t0, SIZEOF_FRAME + 4*FFI_SIZEOF_ARG($fp)
+s.d     $f0, 0(t0)
+b       epilogue</pre>
+
+<p>noretval:</p>
+
+<pre class="ruby"><span class="ruby-identifier">jalr</span>    <span class="ruby-identifier">t9</span>
+
+<span class="ruby-comment"># Epilogue</span>
+</pre>
+
+<p>epilogue:</p>
+
+<pre class="ruby"><span class="ruby-identifier">move</span>    <span class="ruby-identifier">$sp</span>, <span class="ruby-identifier">$fp</span>        
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">$fp</span>, <span class="ruby-constant">FP_OFF</span>(<span class="ruby-identifier">$sp</span>)        <span class="ruby-comment"># Restore frame pointer</span>
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">ra</span>, <span class="ruby-constant">RA_OFF</span>(<span class="ruby-identifier">$sp</span>)         <span class="ruby-comment"># Restore return address</span>
+<span class="ruby-constant">ADDU</span>    <span class="ruby-identifier">$sp</span>, <span class="ruby-constant">SIZEOF_FRAME</span>       <span class="ruby-comment"># Fix stack pointer</span>
+<span class="ruby-identifier">j</span>       <span class="ruby-identifier">ra</span>
+</pre>
+
+<p>$LFE0:</p>
+
+<pre>.end    ffi_call_O32</pre>
+
+<p>/* ffi_closure_O32. Expects address of the passed-in ffi_closure</p>
+
+<pre>     in t4 ($12). Stores any arguments passed in registers onto the
+     stack, then calls ffi_closure_mips_inner_O32, which
+     then decodes them.
+
+     Stack layout:
+
+      3 - a3 save
+      2 - a2 save
+      1 - a1 save
+      0 - a0 save, original sp
+     -1 - ra save
+     -2 - fp save
+     -3 - $16 (s0) save
+     -4 - cprestore
+     -5 - return value high (v1)
+     -6 - return value low (v0)
+     -7 - f14 (le high, be low)
+     -8 - f14 (le low, be high)
+     -9 - f12 (le high, be low)
+    -10 - f12 (le low, be high)
+    -11 - Called function a3 save
+    -12 - Called function a2 save
+    -13 - Called function a1 save
+    -14 - Called function a0 save, our sp and fp point here
+/</pre>
+
+<p>define SIZEOF_FRAME2   (14 * FFI_SIZEOF_ARG) define A3_OFF2        
+(SIZEOF_FRAME2 + 3 * FFI_SIZEOF_ARG) define A2_OFF2         (SIZEOF_FRAME2
++ 2 * FFI_SIZEOF_ARG) define A1_OFF2         (SIZEOF_FRAME2 + 1 *
+FFI_SIZEOF_ARG) define A0_OFF2         (SIZEOF_FRAME2 + 0 * FFI_SIZEOF_ARG)
+define RA_OFF2         (SIZEOF_FRAME2 - 1 * FFI_SIZEOF_ARG) define FP_OFF2 
+(SIZEOF_FRAME2 - 2 * FFI_SIZEOF_ARG) define S0_OFF2         (SIZEOF_FRAME2
+- 3 * FFI_SIZEOF_ARG) define GP_OFF2         (SIZEOF_FRAME2 - 4 *
+FFI_SIZEOF_ARG) define V1_OFF2         (SIZEOF_FRAME2 - 5 * FFI_SIZEOF_ARG)
+define V0_OFF2         (SIZEOF_FRAME2 - 6 * FFI_SIZEOF_ARG) define
+FA_1_1_OFF2     (SIZEOF_FRAME2 - 7 * FFI_SIZEOF_ARG) define FA_1_0_OFF2    
+(SIZEOF_FRAME2 - 8 * FFI_SIZEOF_ARG) define FA_0_1_OFF2     (SIZEOF_FRAME2
+- 9 * FFI_SIZEOF_ARG) define FA_0_0_OFF2     (SIZEOF_FRAME2 - 10 *
+FFI_SIZEOF_ARG)</p>
+
+<pre>.text
+.align  2
+.globl  ffi_closure_O32
+.ent    ffi_closure_O32</pre>
+
+<p>ffi_closure_O32: $LFB1:</p>
+
+<pre># Prologue
+.frame  $fp, SIZEOF_FRAME2, ra
+.set    noreorder
+.cpload t9
+.set    reorder
+SUBU    $sp, SIZEOF_FRAME2
+.cprestore GP_OFF2</pre>
+
+<p>$LCFI4:</p>
+
+<pre class="ruby"><span class="ruby-constant">REG_S</span>   <span class="ruby-node">$16</span>, <span class="ruby-constant">S0_OFF2</span>(<span class="ruby-identifier">$sp</span>)        <span class="ruby-comment"># Save s0</span>
+<span class="ruby-constant">REG_S</span>   <span class="ruby-identifier">$fp</span>, <span class="ruby-constant">FP_OFF2</span>(<span class="ruby-identifier">$sp</span>)        <span class="ruby-comment"># Save frame pointer</span>
+<span class="ruby-constant">REG_S</span>   <span class="ruby-identifier">ra</span>, <span class="ruby-constant">RA_OFF2</span>(<span class="ruby-identifier">$sp</span>)         <span class="ruby-comment"># Save return address</span>
+</pre>
+
+<p>$LCFI6:</p>
+
+<pre class="ruby"><span class="ruby-identifier">move</span>    <span class="ruby-identifier">$fp</span>, <span class="ruby-identifier">$sp</span>
+</pre>
+
+<p>$LCFI7:</p>
+
+<pre># Store all possible argument registers. If there are more than
+# four arguments, then they are stored above where we put a3.
+REG_S   a0, A0_OFF2($fp)
+REG_S   a1, A1_OFF2($fp)
+REG_S   a2, A2_OFF2($fp)
+REG_S   a3, A3_OFF2($fp)
+
+# Load ABI enum to s0
+REG_L   $16, 20($12)    # cif pointer follows tramp.
+REG_L   $16, 0($16)     # abi is first member.
+
+li      $13, 1          # FFI_O32
+bne     $16, $13, 1f    # Skip fp save if FFI_O32_SOFT_FLOAT
+
+# Store all possible float/double registers.
+s.d     $f12, FA_0_0_OFF2($fp)
+s.d     $f14, FA_1_0_OFF2($fp)</pre>
+
+<p>1:</p>
+
+<pre># Call ffi_closure_mips_inner_O32 to do the work.
+la      t9, ffi_closure_mips_inner_O32
+move    a0, $12  # Pointer to the ffi_closure
+addu    a1, $fp, V0_OFF2
+addu    a2, $fp, A0_OFF2
+addu    a3, $fp, FA_0_0_OFF2
+jalr    t9
+
+# Load the return value into the appropriate register.
+move    $8, $2
+li      $9, FFI_TYPE_VOID
+beq     $8, $9, closure_done
+
+li      $13, 1          # FFI_O32
+bne     $16, $13, 1f    # Skip fp restore if FFI_O32_SOFT_FLOAT
+
+li      $9, FFI_TYPE_FLOAT
+l.s     $f0, V0_OFF2($fp)
+beq     $8, $9, closure_done
+
+li      $9, FFI_TYPE_DOUBLE
+l.d     $f0, V0_OFF2($fp)
+beq     $8, $9, closure_done</pre>
+
+<p>1:</p>
+
+<pre class="ruby"><span class="ruby-constant">REG_L</span>   <span class="ruby-node">$3</span>, <span class="ruby-constant">V1_OFF2</span>(<span class="ruby-identifier">$fp</span>)
+<span class="ruby-constant">REG_L</span>   <span class="ruby-node">$2</span>, <span class="ruby-constant">V0_OFF2</span>(<span class="ruby-identifier">$fp</span>)
+</pre>
+
+<p>closure_done:</p>
+
+<pre class="ruby"><span class="ruby-comment"># Epilogue</span>
+<span class="ruby-identifier">move</span>    <span class="ruby-identifier">$sp</span>, <span class="ruby-identifier">$fp</span>
+<span class="ruby-constant">REG_L</span>   <span class="ruby-node">$16</span>, <span class="ruby-constant">S0_OFF2</span>(<span class="ruby-identifier">$sp</span>)        <span class="ruby-comment"># Restore s0</span>
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">$fp</span>, <span class="ruby-constant">FP_OFF2</span>(<span class="ruby-identifier">$sp</span>)        <span class="ruby-comment"># Restore frame pointer</span>
+<span class="ruby-constant">REG_L</span>   <span class="ruby-identifier">ra</span>,  <span class="ruby-constant">RA_OFF2</span>(<span class="ruby-identifier">$sp</span>)        <span class="ruby-comment"># Restore return address</span>
+<span class="ruby-constant">ADDU</span>    <span class="ruby-identifier">$sp</span>, <span class="ruby-constant">SIZEOF_FRAME2</span>
+<span class="ruby-identifier">j</span>       <span class="ruby-identifier">ra</span>
+</pre>
+
+<p>$LFE1:</p>
+
+<pre>.end    ffi_closure_O32</pre>
+
+<p>/* DWARF-2 unwind info. */</p>
+
+<pre>.section        .eh_frame,&quot;a&quot;,@progbits</pre>
+
+<p>$Lframe0:</p>
+
+<pre>.4byte  $LECIE0-$LSCIE0  # Length of Common Information Entry</pre>
+
+<p>$LSCIE0:</p>
+
+<pre>.4byte  0x0      # CIE Identifier Tag
+.byte   0x1      # CIE Version
+.ascii &quot;zR\0&quot;    # CIE Augmentation
+.uleb128 0x1     # CIE Code Alignment Factor
+.sleb128 4       # CIE Data Alignment Factor
+.byte   0x1f     # CIE RA Column
+.uleb128 0x1     # Augmentation size
+.byte   0x00     # FDE Encoding (absptr)
+.byte   0xc      # DW_CFA_def_cfa
+.uleb128 0x1d
+.uleb128 0x0
+.align  2</pre>
+
+<p>$LECIE0: $LSFDE0:</p>
+
+<pre>.4byte  $LEFDE0-$LASFDE0         # FDE Length</pre>
+
+<p>$LASFDE0:</p>
+
+<pre>.4byte  $LASFDE0-$Lframe0        # FDE CIE offset
+.4byte  $LFB0    # FDE initial location
+.4byte  $LFE0-$LFB0      # FDE address range
+.uleb128 0x0     # Augmentation size
+.byte   0x4      # DW_CFA_advance_loc4
+.4byte  $LCFI0-$LFB0
+.byte   0xe      # DW_CFA_def_cfa_offset
+.uleb128 0x18
+.byte   0x4      # DW_CFA_advance_loc4
+.4byte  $LCFI2-$LCFI0
+.byte   0x11     # DW_CFA_offset_extended_sf
+.uleb128 0x1e    # $fp
+.sleb128 -2      # SIZEOF_FRAME2 - 2*FFI_SIZEOF_ARG($sp)
+.byte   0x11     # DW_CFA_offset_extended_sf
+.uleb128 0x1f    # $ra
+.sleb128 -1      # SIZEOF_FRAME2 - 1*FFI_SIZEOF_ARG($sp)
+.byte   0x4      # DW_CFA_advance_loc4
+.4byte  $LCFI3-$LCFI2
+.byte   0xc      # DW_CFA_def_cfa
+.uleb128 0x1e
+.uleb128 0x18
+.align  2</pre>
+
+<p>$LEFDE0: $LSFDE1:</p>
+
+<pre>.4byte  $LEFDE1-$LASFDE1         # FDE Length</pre>
+
+<p>$LASFDE1:</p>
+
+<pre>.4byte  $LASFDE1-$Lframe0        # FDE CIE offset
+.4byte  $LFB1    # FDE initial location
+.4byte  $LFE1-$LFB1      # FDE address range
+.uleb128 0x0     # Augmentation size
+.byte   0x4      # DW_CFA_advance_loc4
+.4byte  $LCFI4-$LFB1
+.byte   0xe      # DW_CFA_def_cfa_offset
+.uleb128 0x38
+.byte   0x4      # DW_CFA_advance_loc4
+.4byte  $LCFI6-$LCFI4
+.byte   0x11     # DW_CFA_offset_extended_sf
+.uleb128 0x10    # $16
+.sleb128 -3      # SIZEOF_FRAME2 - 3*FFI_SIZEOF_ARG($sp)
+.byte   0x11     # DW_CFA_offset_extended_sf
+.uleb128 0x1e    # $fp
+.sleb128 -2      # SIZEOF_FRAME2 - 2*FFI_SIZEOF_ARG($sp)
+.byte   0x11     # DW_CFA_offset_extended_sf
+.uleb128 0x1f    # $ra
+.sleb128 -1      # SIZEOF_FRAME2 - 1*FFI_SIZEOF_ARG($sp)
+.byte   0x4      # DW_CFA_advance_loc4
+.4byte  $LCFI7-$LCFI6
+.byte   0xc      # DW_CFA_def_cfa
+.uleb128 0x1e
+.uleb128 0x38
+.align  2</pre>
+
+<p>$LEFDE1:</p>
+
+<p>endif</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

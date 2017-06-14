@@ -1,7 +1,7 @@
 require 'uri'
 require 'net/http'
-require 'net/ping'
 require 'net/http/digest_auth'
+require 'net/ping/wmi'
 
 module Support
   
