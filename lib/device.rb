@@ -56,7 +56,6 @@ class Device < Site
   end
   
   def up?
-    # check = Net::Ping::Wmi.new(@ip)
     check = Net::Ping::WMI.new(@ip)
     check.ping?
   end
