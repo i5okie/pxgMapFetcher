@@ -1,7 +1,7 @@
 *.zip
 /pxgMapFetcher
 /packaging/vendor
-/packagiong/traveling-ruby*
+/packaging/traveling-ruby*
 /.c9
 Gemfile.lock
 /data
