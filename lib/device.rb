@@ -12,7 +12,7 @@ class Device < Site
   end
 
   # Create 'master' csv file, process downloaded csv files into one while skipping some registers
-  def fetchMaps(uids, savepath, skipList=[])
+  def fetchMaps(uids, savepath)
     master = "#{savepath}/#{@name}_#{@ip}_register-map.csv"
 
     # Create master device csv file
