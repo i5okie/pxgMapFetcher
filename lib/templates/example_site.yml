@@ -35,7 +35,7 @@
 
   # ADVANCED: Do not include these data points (modbus register addresses);
   #  Review an output modbus table from device to find the addresses.
-  :skipRegisters: [6014, 6078, 1061, 1073, 1085, 1091, 1477, 6268, 6288, 11022, 11027, 4296, 4298, 4300, 5164, 5166, 5168, 6268, 6288, 7620, 7622, 1099, 1101, 1043, 1045, 1047]
+  :skipRegisters: [Max Van, Max Vbn, Max Vcn, Ia Max, Ib Max, Ic Max, Max Real Power, Max Apparent Power, Min System PF (Disp), Max System PF (Disp), Building Alarm 1, Building Alarm 2, Building Alarm 3, Building Alarm 4, Check Modem]
 
   # DO NOT CHANGE
   :endpointUrl: /content/modbus-tcp.cgi?uid=
