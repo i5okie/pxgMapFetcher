@@ -12,6 +12,8 @@ Created to submit a Device Definition File request to Schneider for DCIM package
 2. Fill in devices.csv
 3. Run program
 
+![screenshot](https://image.prntscr.com/image/YtAxjpn1Q7iTruyta3PcLQ.png)
+
 
 Windows
 ---
