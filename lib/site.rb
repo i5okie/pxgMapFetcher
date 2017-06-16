@@ -1,6 +1,7 @@
 class Site
   include Support
-  
+
+  # Site.new(site hash read from site difinition file (yml file)
   def initialize(site)
     begin
       @name = site[:name]
@@ -11,23 +12,33 @@ class Site
       @savepath = "./data/#{@name}"
       @devicesfile = site[:devicesFile]
       @endpointurl = site[:endpointUrl]
-      @skipaddresses = site[:skipRegisters]
+      @skiplist = []
       @devices = []
+      site[:skipRegisters].each do |s|
+        if !s.instance_of? String
+          @skiplist.push s.to_s
+        else
+          @skiplist.push s
+        end
+      end
     rescue => e
       puts e.message
       strace(e)
     end
   end
-  
+
+  # Read list of devices from csv file specified in yml SDF
+  # Populate 'devices' array with device objects
   def updateDeviceList
     @devices = []
-    PrintLine.updating('Devices',@name)
+    PrintLine.updating('Devices',@name.upcase)
     begin
       dlist = SmarterCSV.process("./sites/#{@devicesfile}")
       dlist.each do |d|
         curdev = Device.new(d[:name],d[:ip],@endpointurl)
         curdev.username = @username
         curdev.password = @password
+        curdev.skiplist = @skiplist
         @devices.push curdev
       end
       print "    Found: "
@@ -35,20 +46,24 @@ class Site
     rescue => e
       strace(e,"Failed to get list of devices")
     end
-  end  
-  
+  end
+
+  # Iterate through list of all devices and fetch and process csv files
+  # Check if device is reachable on the network before calling
+  # 'fetchMaps' method on each device which actually does most of the work
   def fetchMaps
-    print "Downloading Register Maps for #{@name.light_green} with uids: "
-    @uids.each {|u| print "#{u.to_s.light_green}; "}; puts
+    print "Downloading Register Maps for #{@name.upcase} with uids: ".black.on_white
+    @uids.each {|u| print "#{u}; ".black.on_white}; puts
     begin
       savepath = "./#{@savedir}"
-      @devices.each do |d| 
-        print " #{d.name.light_yellow} ".on_black
+      @devices.each do |d|
+        print "Device: #{d.name.magenta} IP: #{d.ip.cyan} #{' ' * 10}".on_black
         if d.up?
-          PrintLine.done 'Up'
+          PrintLine.done " up "
           d.fetchMaps(@uids, savepath)
         else
-          PrintLine.error 'Down'
+          PrintLine.error ' downn '
+          puts
         end
       end
     rescue => e
@@ -56,6 +71,6 @@ class Site
       strace(e, 'Failed to fetch maps from all devices')
     end
   end
-  
-  attr_reader :name, :uids, :username, :password, :devicesfile, :endpointurl, :devices
+
+  attr_reader :name, :uids, :username, :password, :devicesfile, :endpointurl, :devices, :skiplist
 end

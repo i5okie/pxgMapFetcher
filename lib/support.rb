@@ -4,20 +4,20 @@ require 'net/http/digest_auth'
 require 'net/ping/wmi'
 
 module Support
-  
-  def downloadFile(url, credentials)
+  # Downloads file with Digest Authentication, returns contents
+  def downloadFile(url, username='admin', password='admin')
     begin
       digest_auth = Net::HTTP::DigestAuth.new
       uri = URI.parse url
-      uri.user = credentials['username']
-      uri.password = credentials['password']
-  
+      uri.user = username
+      uri.password = password
+
       # Requesting the authentication header
       h = Net::HTTP.new uri.host, uri.port
       req = Net::HTTP::Get.new uri.request_uri
       res = h.request req
       auth = digest_auth.auth_header uri, res['www-authenticate'], 'GET'
-  
+
       # Create new request with authorization header
       req = Net::HTTP::Get.new uri
       req.add_field 'Authorization', auth
@@ -28,6 +28,7 @@ module Support
     end
   end
 
+  # Clean printout of exception with stacktrace
   def strace(exception, msg = 'Unkown Error')
     print "\a"
     stacktrace = exception.backtrace.map do |call|
@@ -41,6 +42,15 @@ module Support
     end
     puts "#{msg.red}: #{exception.message}"
     stacktrace.each { |line| puts line }
+    exit
+  end
+
+  # Used in dev. only to quickly output something and be visible in the stream of garbage
+  def debug(msg = "")
+    puts "\n\n\n"
+    puts "   DEBUGGING   ".white.on_red
+    puts msg
+    puts "\n\n\n"
     exit
   end
 end

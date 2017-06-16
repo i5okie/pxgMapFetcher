@@ -1,11 +1,12 @@
 require 'colorize'
 require 'colorized_string'
 
+# Utility methods to facilitate some humanization to the screen output
 module PrintLine
   def self.startup
-    puts "-----------------------------------------".blue
-    puts "     pxgMapFetcher -- MultiSite          ".on_black
-    puts "-----------------------------------------".blue
+    puts "#{'-' * 80}".blue
+    puts center("pxgMapFetcher -- MultiSite").on_black
+    puts "#{'-' * 80}".blue
   end
 
   def self.updating(what, subj='')
@@ -20,12 +21,22 @@ module PrintLine
   def self.done(msg="Done")
     print '['
     print msg.green
-    puts ']'
+    print ']'
   end
 
   def self.error(err='Error')
     print '['
     print err.red
-    puts ']'
+    print ']'
+  end
+
+  def self.center(text)
+    le = text.length
+    if ((80 - le) % 2)==0
+      sp = (80 - le) / 2
+    else
+      sp = (80 - le) % 2
+    end
+    "#{' ' * sp}#{text}"
   end
 end

@@ -11,41 +11,51 @@ require_relative './printline.rb'
 module MapFetcher
   extend Support
   @@runPath = File.dirname(__FILE__)
-  
+
   def self.startup
     @sites = []
     PrintLine.startup
     self.updateSites
   end
-  
+
+  # facilitate creation of folder structure and copying example files only on first run
   def self.trSetup
-    FileUtils::mkdir_p("./sites")
-    FileUtils::mkdir_p("./data")
-    FileUtils::cp("#{@@runPath}/templates/example_site.yml",'./sites/')
-    FileUtils::cp("#{@@runPath}/templates/example_site.csv",'./sites/')
+    if File.exist?("./version")
+
+    else
+      File.open("./version", "w") do |line|
+        line.puts "Version 1.1.1"
+      end
+      FileUtils::mkdir_p("./sites")
+      FileUtils::mkdir_p("./data")
+      FileUtils::cp("#{@@runPath}/templates/example_site.yml",'./sites/')
+      FileUtils::cp("#{@@runPath}/templates/example_site.csv",'./sites/')
+    end
   end
-  
+
   def self.sites
     @sites
   end
 
+  # Read 'site definition files' (yml files), process and populate
+  # 'sites' array with Site objects
   def self.updateSites
     @sites = []
     PrintLine.updating('Sites')
     begin
-      print "    Found: "
       Dir.glob('./sites/*.yml') do |config|
-        site = YAML.load_file(config)
-        s = Site.new(site)
-        FileUtils::mkdir_p("./data/#{s.name}")
+        s = Site.new( YAML.load_file(config) )
+        FileUtils::mkdir_p("./data/#{s.name.upcase}")
         sites.push s
-        print "#{s.name.green}" unless @sites.length < 1
-        print "," unless @sites.length ==1
         raise "No sites found".red if @sites.length < 1
+      end
+      print "    Found (#{@sites.count.to_s.white}): "
+      @sites.each do |s|
+        print "#{s.name.upcase.green}" unless @sites.length < 1
+        print "," unless @sites.length == 1
       end
       puts
     rescue => e
-      puts e.message
       strace(e)
       raise "Can't Rescue"
     end
