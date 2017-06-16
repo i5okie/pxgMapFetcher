@@ -23,13 +23,20 @@ module MapFetcher
     if File.exist?("./version")
 
     else
+      self.startup
+      puts
+      puts "      First Run".white.on_green
       File.open("./version", "w") do |line|
-        line.puts "Version 1.1.1"
+        line.puts "Version 1.1.5"
       end
       FileUtils::mkdir_p("./sites")
       FileUtils::mkdir_p("./data")
       FileUtils::cp("#{@@runPath}/templates/example_site.yml",'./sites/')
       FileUtils::cp("#{@@runPath}/templates/example_site.csv",'./sites/')
+      puts "  - Edit site definition files and populate device lists -  "
+      puts "  - Run this again when done -"
+      puts " ...exiting"
+      exit
     end
   end
 
