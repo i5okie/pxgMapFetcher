@@ -33,9 +33,45 @@
   #  Alarms” on page 71 for more information on identifying specific breaker
   #  registers.
 
-  # ADVANCED: Do not include these data points (modbus register addresses);
-  #  Review an output modbus table from device to find the addresses.
+  # ADVANCED: Do not include these data points (display name);
   :skipRegisters: [Max Van, Max Vbn, Max Vcn, Ia Max, Ib Max, Ic Max, Max Real Power, Max Apparent Power, Min System PF (Disp), Max System PF (Disp), Building Alarm 1, Building Alarm 2, Building Alarm 3, Building Alarm 4, Check Modem]
+
+  # -- ALL - Available data points in PowerXpert Gateway 1000 series --------------------------------------------------------------
+  # Vendor Name, Model Name, Display Name, Device Type, Serial Number, Software Version,
+  # Apparent Power, Asset Identification Tag, Attached Devices, Branch Breaker Disconnected, Branch Breaker Overload, 
+  # Branch Breaker Overload Warning, Breaker Overload Setpoint, Breaker Rating, Breaker Warning Setpoint, 
+  # Building Alarm 1, Building Alarm 2, Building Alarm 3, Building Alarm 4, Check Modem, Check System Interface Board, 
+  # Configuration Error, Date Last Serviced, Demand Interval, Demand Type, Emergency Shutdown Command, 
+  # Frequency, Ground Current Overload, Ground Current Warning, Ia, Ia Max, Ib, Ib Max, Ic, Ic Max, IinA, IinB, IinC, 
+  # Input AC Over Voltage, Input AC Under Voltage, Input Demand Energy over the last hour, Input Frequency, 
+  # Input Phase A % Current THD, Input Phase A % Voltage THD, Input Phase A Current Ratio, Input Phase A Voltage Ratio, 
+  # Input Phase B % Current THD, Input Phase B % Voltage THD, Input Phase B Current Ratio, Input Phase B Voltage Ratio, 
+  # Input Phase C % Current THD, Input Phase C % Voltage THD, Input Phase C Current Ratio, Input Phase C Voltage Ratio, 
+  # Input Phase Rotation Error, Input Under Or Over Frequency, Installation Date, Internal Communication Failure, 
+  # Invalid Board ID, IoutA, IoutB, IoutC, IoutGnd, IoutN, KW Hours, Main Breaker Overload, Main Breaker Overload Warning, 
+  # Max Apparent Power, Max Frequency, Max Real Power, Max System PF (Disp), Max Van, Max Vbn, Max Vcn, 
+  # Maximum Number of Breakers, Min Frequency, Min System PF (Disp), Monthly KW Hours, 
+  # Neutral Overload, Neutral Overload Warning, Nominal Input Frequency, Nominal Input Voltage, Nominal Output Frequency, 
+  # Nominal Output Voltage, Nominal Voltage, Non-Volatile Memory Failure, Number of Phases, Output AC Over Voltage, 
+  # Output AC Under Voltage, Output Demand Energy over the last hour, Output Frequency, 
+  # Output Phase A % Current THD, Output Phase A % Voltage THD, Output Phase A Current Ratio, Output Phase A Voltage Ratio, 
+  # Output Phase B % Current THD, Output Phase B % Voltage THD, Output Phase B Current Ratio, Output Phase B Voltage Ratio, 
+  # Output Phase C % Current THD, Output Phase C % Voltage THD, Output Phase C Current Ratio, Output Phase C Voltage Ratio, 
+  # Output Under Or Over Frequency, Panel Over Voltage, Panel Phase A Loss, Panel Phase B Loss, Panel Phase C Loss, 
+  # Panel Under or Over Frequency, Panel Under Voltage, Panels, Part Number, Percent Full Load, PF Disp In, PF Disp Out, 
+  # PF Displacement, Phase A Branch Breaker Overload, Phase A Branch Breaker Overload Warning, 
+  # Phase A High Input Thd, Phase A High Output Thd, Phase A Output Crest Factor, Phase A Overload, Phase A Overload (Extreme Level), 
+  # Phase A Overload (High Level), Phase A Percent Full Load Current, Phase B Branch Breaker Overload, 
+  # Phase B Branch Breaker Overload Warning, Phase B High Input Thd, Phase B High Output Thd, Phase B Output Crest Factor, 
+  # Phase B Overload, Phase B Overload (Extreme Level), Phase B Overload (High Level), Phase B Percent Full Load Current, 
+  # Phase C Branch Breaker Overload, Phase C Branch Breaker Overload Warning, Phase C High Input Thd, Phase C High Output Thd, 
+  # Phase C Output Crest Factor, Phase C Overload, Phase C Overload (Extreme Level), Phase C Overload (High Level), 
+  # Phase C Percent Full Load Current, Power Xpert Status, Primary Breaker Open, Primary Breaker Tripped, Real Power, 
+  # Remote Emergency Power Off, Secondary Breaker Open, Secondary Breaker Tripped, 
+  # Status - Normal, System Alarm Active, System Notice Active, System Overload, 
+  # System Status, System VA Rating, System Watts Rating, Transformer Over Temperature, Transformer Over Temperature Warning, 
+  # Utility Present, VA In, VA Out, Vab Input, Van, Van Input, Van Output, Vbc Input, Vbn, Vbn Input, Vbn Output, 
+  # Vca Input, Vcn, Vcn Input, Vcn Output, Watts In, Watts Out, Yearly KW Hours
 
   # DO NOT CHANGE
   :endpointUrl: /content/modbus-tcp.cgi?uid=
