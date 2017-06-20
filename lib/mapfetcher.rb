@@ -58,8 +58,7 @@ module MapFetcher
       end
       print "    Found (#{@sites.count.to_s.white}): "
       @sites.each do |s|
-        print "#{s.name.upcase.green}" unless @sites.length < 1
-        print "," unless @sites.length == 1
+        print "#{s.name.upcase.green}; " unless @sites.length < 1
       end
       puts
     rescue => e
