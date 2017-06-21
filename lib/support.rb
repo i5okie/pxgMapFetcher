@@ -2,10 +2,12 @@ require 'uri'
 require 'net/http'
 require 'net/http/digest_auth'
 require 'os'
+# Check if OS is linux or windows and require only the compatible module
 require 'net/ping/wmi' if OS.windows?
 require 'net/ping' if OS.linux?
 
 module Support
+  
   # Downloads file with Digest Authentication, returns contents
   def downloadFile(url, username='admin', password='admin')
     begin

@@ -18,6 +18,7 @@ class Site
     end
   end
   
+  # Read site definition files from ./sites directory
   def updateDeviceList
     @devices = []
     PrintLine.updating('Devices',@name)
@@ -36,6 +37,7 @@ class Site
     end
   end  
   
+  # Check if device is reachable, call fetchMaps method on each device in all sites.
   def fetchMaps
     print "Downloading Register Maps for #{@name.upcase} with uids: ".black.on_white
     @uids.each {|u| print "#{u}; ".black.on_white}; puts

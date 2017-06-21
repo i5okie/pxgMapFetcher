@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.2.2"
 
 gem 'smarter_csv'
 gem 'net-http-digest_auth'
