@@ -12,7 +12,8 @@ This can be a very time consuming process. – MapFetcher will do this for you i
 Originally created to submit a Device Definition File request to Schneider for Data Center Expert (DCIM) since PowerXpert Gateway Series 1000 devices do not provide all available data via SNMP, and a unique ModBus register map must be downloaded whenever panel configuration is modified or is different from other devices. 
 
 #### Build
-1. Under linux:  rake package:win32
+1. Download / Clone repo
+2. Run rake `rake package:win32` for Windows / `rake package:linux:x86` for Linux
 
 #### Quick Start:
 Download release zip, then:
