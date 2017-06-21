@@ -1,6 +1,8 @@
 # pxgMapFetcher
 ---
-A utility download ModBus register maps from Eaton PowerXpert Gateway 1000 Series devices.
+**A utility download ModBus register maps from Eaton PowerXpert Gateway 1000 Series devices.**
+_Tested to work with: PXG1000 and PXG2000. Should be compatible with others such as PXGX 2000, and PXG UPS cards._
+---
 The way ModBus is implemented on PXG1000 series devices requires a register map to be manually generated for each Unit ID, each its own file.
 - Device itself is Unit ID 0
 - Unit ID (2-17) Listing Summary data per panel
@@ -22,12 +24,7 @@ Download release zip, then:
 2. Rename above files as you see fit, make sure to specify correct .csv file name inside the .yml file
 3. Run `mapFetcher.bat` (windows) / `./mapFetcher` (linux)
 
-
 ![screenshot](https://image.prntscr.com/image/YtAxjpn1Q7iTruyta3PcLQ.png)
-
-
-
-
 
 Details:
 ---
