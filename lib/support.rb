@@ -1,7 +1,9 @@
 require 'uri'
 require 'net/http'
 require 'net/http/digest_auth'
-require 'net/ping/wmi'
+require 'os'
+require 'net/ping/wmi' if OS.windows?
+require 'net/ping' if OS.linux?
 
 module Support
   # Downloads file with Digest Authentication, returns contents

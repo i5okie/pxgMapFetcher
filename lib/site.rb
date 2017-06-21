@@ -43,10 +43,10 @@ class Site
       @devices.each do |d| 
         print "Device: #{d.name.magenta} IP: #{d.ip.cyan} #{' ' * 10}".on_black
         if d.up?
-          PrintLine.done " up "
+          PrintLine.done ' up '
           d.fetchMaps(@uids, @savepath, @skiplist)
         else
-          PrintLine.error ' downn '
+          PrintLine.error ' down '
           puts
         end
       end

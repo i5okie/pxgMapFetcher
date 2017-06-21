@@ -80,7 +80,8 @@ class Device < Site
   end
   
   def up?
-    check = Net::Ping::WMI.new(@ip)
+    check = Net::Ping::WMI.new(@ip) if OS.windows?
+    check = Net::Ping.new(@ip) if OS.linux?
     check.ping?
   end
   
