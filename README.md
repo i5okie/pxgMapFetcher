@@ -1,11 +1,15 @@
 # pxgMapFetcher
 ---
-A utility to download and compile ModBus register maps for specified uids
-from APC PowerXpert Gateway Series 1000 devices.
+A utility download ModBus register maps from Eaton PowerXpert Gateway 1000 Series devices.
+The way ModBus is implemented on PXG1000 series devices requires a register map to be manually generated for each Unit ID, each its own file.
+- Device itself is Unit ID 0
+- Unit ID (2-17) Listing Summary data per panel
+- Unit ID (18-33) Listing Lndividual breaker data per specific panel
 
-Connects to each device, downloads specified UIDs, and combines them into a single csv file per device.
+These files have to be downloaded every time a panel configuration changes (i.e.: breaker added/removed/changed for different one).
+This can be a very time consuming process. – MapFetcher will do this for you in a single step. MapFetcher goes one step further and combines all individual .csv files into a single register map per device.
 
-Created to submit a Device Definition File request to Schneider for DCIM package since PowerXpert Gateway Series 1000 devices do not provide complete available data via SNMP, a unique ModBus register map must be downloaded from each device where breakers and breaker assignments vary from panel to panel.
+Originally created to submit a Device Definition File request to Schneider for Data Center Expert (DCIM) since PowerXpert Gateway Series 1000 devices do not provide all available data via SNMP, and a unique ModBus register map must be downloaded whenever panel configuration is modified or is different from other devices. 
 
 #### Build
 1. Under linux:  rake package:win32

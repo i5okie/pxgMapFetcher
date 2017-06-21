@@ -27,7 +27,7 @@ module MapFetcher
       puts
       puts "      First Run".white.on_green
       File.open("./version", "w") do |line|
-        line.puts "Version 1.1.5"
+        line.puts "Version 1.1.6"
       end
       FileUtils::mkdir_p("./sites")
       FileUtils::mkdir_p("./data")
