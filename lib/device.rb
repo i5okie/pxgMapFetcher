@@ -18,14 +18,14 @@ class Device
       CSV.open(master, 'w') do |row|
         scount = 0
         icount = 0
-        
+
         # Insert header row
         row << ["Parameter Name","Display Name","uid","Base Address (0-based)","Discrete","Units","Type","Size (bytes)","Is Timestamp","Bit Offset","Swap Bytes","Swap Words","Divider","Multiplier","Date Spec","Alarm On False","Writable","Possible Values"]
         puts
         puts "#{' '*(name.length+1)}Fetching individual register maps for Unit IDs: "
         print "#{' '*(name.length+1)}"
         raise "Empty UIDS" if uids.empty?
-        
+
         # Iterate over each uid
         uids.each do |uid|
           full_url = "#{url}#{uid}"
@@ -45,7 +45,7 @@ class Device
               contents.each do |r|
                 r.insert(2, uid)  # add uid field before the register address field
                 icount += 1
-                
+
                 # filter out skipped
                 if skiplist.include?(r[1])
                   scount += 1
@@ -72,11 +72,11 @@ class Device
       strace(e,"Something happened with fetching this file")
     end
   end
-  
+
   # Check if device is reachable on the network, returns boolean true or false
   def up?
     check = Net::Ping::WMI.new(@ip) if OS.windows?
-    check = Net::Ping.new(@ip) if OS.linux?
+    check = Net::Ping::TCP.new(@ip) if OS.linux? || OS.mac?
     check.ping?
   end
 
