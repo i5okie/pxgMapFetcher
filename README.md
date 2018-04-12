@@ -29,6 +29,9 @@ Download release zip, then:
 
 ![screenshot](https://image.prntscr.com/image/YtAxjpn1Q7iTruyta3PcLQ.png)
 
+#### TODO:
+Update to latest revision.
+
 Details:
 ---
 The following files can be modified to achieve differet results:
